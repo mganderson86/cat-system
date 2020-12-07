@@ -2,6 +2,7 @@ import React from "react";
 import { Redirect, Switch, Route, withRouter } from "react-router";
 
 import LoginComponent from "./components/auth/LoginPage";
+import SignupForm from "./components/demo/index"
 import ConnectPicture from "./components/section1/ConnectPicture";
 import ConnectSentence from "./components/section1/ConnectSentence";
 import Section1 from "./components/section1/Section1";
@@ -55,8 +56,9 @@ class PageSwitch extends React.Component {
 	render() {
 		return (
 			<Switch>
-				<Route path="/login" component={LoginComponent}></Route>
-				<Route exact path="/" render={() => <Redirect to="/section1" />}></Route>
+				<Route path="/auth" component={LoginComponent}></Route>
+				<Route path="/demo" component={SignupForm}></Route>
+				<Route exact path="/" render={() => <Redirect to="/demo" />}></Route>
                 <Route path="/section1" component={Section1}></Route>
 				<Route path="/section1_1" component={ConnectPicture}></Route>
 				<Route path="/section1_2" component={ConnectSentence}></Route>

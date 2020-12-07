@@ -1,12 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
-import { BrowserRouter} from "react-router-dom";
+//import { BrowserRouter} from "react-router-dom";
+import { connect } from "react-redux";
 import './index.css';
 /* to integrate with stored procedures */
 import FetchData from "../utils/FetchData";
+import { Divider, Typography } from "antd";
 
+const { Title } = Typography;
  
  const MyTextInput = ({ label, ...props }) => {
    // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
@@ -76,13 +79,20 @@ import FetchData from "../utils/FetchData";
  async function SubmitData (vals) {
   await FetchData("/InsertStudentInformation", "PUT", vals)
     .then((res) => {
-    if (res.status === 200) {
-      return res.json();
-      //this.props.history.push("/section1");
-    } else {
-      alert('An error occured adding the information.')
-    }
-  })
+      if (res.status === 200) {
+        return res.json();
+      } else {
+        alert('An error occured adding the information.')
+      }
+    })
+    .then((res) => {
+      if (res.id != "") {
+        this.setState({ id: res.id });
+        this.props.history.push("/section1");
+      } else {
+        alert('An error occured retrieving a database response.')
+      }
+    })
  }
 
  // And now we can use these
@@ -117,41 +127,58 @@ import FetchData from "../utils/FetchData";
   render () {
       return (
       <>
-       <h1>Minimal Sociodemographic Info</h1>
+      <div style={{ fontSize: this.props.fontSize }}>
+				<div className="section"></div>
+      <Divider style={{ margin: "10px" }} />
+      <Title level={3} align="left">
+        Minimal Sociographic Info
+			</Title>
+      <Divider style={{ margin: "10px" }} />
        <Formik
          initialValues={{
            FirstName: '',
            LastName: '',
-           //acceptedTerms: false, // added for our checkbox
-           Ethnicity: '', // added for our select
-         }}
+           Gender: '',
+           School: '',
+           Grade:'',
+           Ethnicity: [], 
+           EthnicityOther: '',
+           PrimaryLanguage: [],
+           OtherLanguageHome: '',
+           languagesHome: [],
+           OtherLanguagePeople: ''
+          }}
          validationSchema={Yup.object({
            FirstName: Yup.string()
              .max(15, 'Must be 15 characters or less')
-             .required('Required'),
+             .required('Please provide your First Name.'),
            LastName: Yup.string()
              .max(20, 'Must be 20 characters or less')
-             .required('Required'),
+             .required('Please provide your Last Name.'),
            Gender: Yup.string()
              .oneOf(
                ['boy', 'girl', 'other'],
                'Invalid selection'
              )
-             .required('Required'),
+             .required('Please indicate your gender.'),
            School: Yup.string()
              .max(100, 'Must be 100 characters or less')
-             .required('Required'),
+             .required('Please enter your school\'s name.'),
             Grade: Yup.mixed()
              .oneOf(
                ['4', '5', '6', '7', '8', 'other'],
                'Invalid selection'
              )
-             .required('Required'),
+             .required('Please select your grade level.'),
+            HomeroomTeacher: Yup.string()
+            .max(50, 'Should be 50 characters or less')
+            .required('Please provide your Homeroom Teacher\'s name'),
             Ethnicity:  Yup.array().of( 
               Yup.string().oneOf(
                 ['white', 'black', 'latino', 'asian', 'amerindian', 'pacific', 'other'],
                 'Invalid racial/ethnic selection')
             )
+            .min(1)
             .required('Please select at least one racial/ethnic background.'),
             EthnicityOther: Yup.string().when(['Ethnicity'], {
               is: (Ethnicty) => Ethnicty.includes ('other'),
@@ -163,7 +190,7 @@ import FetchData from "../utils/FetchData";
                   ['spanish', 'arabic', 'chinese', 'english', 'other'],
                   'Invalid language selection')
               )
-                .required('Please select at least one language.'),
+            .required('Please select at least one language.'),
             OtherLanguageHome: Yup.string().when(['PrimaryLanguage'], {
               is: (PrimaryLanguage) => PrimaryLanguage.includes ('other'),
               then: Yup.string().required('Please enter some more information.'),
@@ -174,18 +201,17 @@ import FetchData from "../utils/FetchData";
                     ['spanish', 'arabic', 'chinese', 'english', 'other'],
                     'Invalid language selection')
                 )
-                  .required('Please select at least one language.'),
+            .required('Please select at least one language.'),
             OtherLanguagePeople: Yup.string().when(['languagesHome'], {
               is: (languagesHome) => languagesHome.includes ('other'),
               then: Yup.string().required('Please enter some more information.'),
             })
-            .max(50, 'Should be 50 characters or less'),
+            .max(50, 'Should be 50 characters or less'), 
          })}
          onSubmit={(values, { setSubmitting }) => {
            setTimeout(() => {
              alert(JSON.stringify(values, null, 2));
-             SubmitData(values);
-             //fetchData('/InsertStudentInformation/', 'PUT', values) /*put data to database; will need to get a unique id for next section */
+             SubmitData(values);     /*put data to database; will need to get a unique id for next section */
              setSubmitting(false);
            }, 400);
          }}
@@ -347,8 +373,21 @@ import FetchData from "../utils/FetchData";
            <button type="submit">Submit</button>
          </Form>
        </Formik>
+
+      </div>
+      
      </>
    );
   }
  }
- ReactDOM.render(<SignupForm />, document.getElementById('root'));
+
+const mapStateToProps = (state) => {
+	return {
+    fontSize: state.fontSize,
+    id: state.id,
+	};
+};
+
+export default connect(mapStateToProps)(SignupForm);
+
+ //ReactDOM.render(<SignupForm />, document.getElementById('root'));
