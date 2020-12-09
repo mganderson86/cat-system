@@ -1,23 +1,15 @@
-import { Button, Col, Divider, Radio, Row, Typography, notification } from "antd";
+import { Button, Col, Divider, Radio, Row, Typography } from "antd";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Pic from "../../play.png";
 import ReactAudioPlayer from "react-audio-player";
-import { NextQuestionButton } from "../utils/Utils";
 
-const { Title, Text } = Typography;
-
-const openNotification = () => {
-	notification.open({
-		message: "You should select an option to go next.",
-		duration: 2.5,
-	});
-};
+const { Title, Text, Paragraph } = Typography;
 
 class Section7 extends Component {
 	constructor(props) {
-		super(props);
+		super();
 		this.state = {
 			value: -1,
 			sampleItem: 1,
@@ -35,15 +27,6 @@ class Section7 extends Component {
 		this.setState({
 			showElem: "inline",
 		});
-	};
-
-	onClickNext = (e) => {
-		e.preventDefault();
-		if (this.state.value === -1) {
-			openNotification();
-			return;
-		}
-		this.props.history.push("/section7_1");
 	};
 
 	render() {
@@ -91,7 +74,7 @@ class Section7 extends Component {
 								controls
 							></ReactAudioPlayer>
 						</span>
-						<Divider style={{ margin: "10px" }} />
+						<Divider />
 					</div>
 
 					<div className="green-text">
@@ -154,7 +137,7 @@ class Section7 extends Component {
 					</div>
 
 					<div style={{ margin: "40px", display: "flex", justifyContent: "center", alignItems: "center" }}>
-						<Radio.Group onChange={this.onChange} value={this.state.value}>
+						<Radio.Group onChange={this.onChange} value={this.state.value} size="large">
 							<Radio value={1} style={{ color: "black" }}>
 								Yes
 							</Radio>
@@ -171,34 +154,42 @@ class Section7 extends Component {
 					</div>
 				</div>
 
-				{this.state.sampleItem === 1 ? (
-					<div style={{ position: "absolute", bottom: "50px", right: "80px" }}>
+				<div style={{ position: "absolute", bottom: "120px", right: "80px" }}>
+					{this.state.sampleItem === 1 ? (
 						<Button
 							danger
 							style={{ color: "green", borderColor: "green" }}
 							onClick={() => {
-								if (this.state.value === -1) {
-									openNotification();
-									return;
-								}
-								this.setState({ sampleItem: 2, value: -1 });
+								this.setState({ sampleItem: 2 });
 							}}
 						>
 							Next
 						</Button>
-					</div>
-				) : (
-					<NextQuestionButton getNextQuestion={this.onClickNext} />
-				)}
+					) : (
+						<Button danger style={{ color: "green", borderColor: "green" }}>
+							<Link to="/section7_1">Next</Link>
+						</Button>
+					)}
+				</div>
 			</div>
 		);
 	}
 }
 
 const mapStateToProps = (state) => {
+	console.log(state);
 	return {
+		sessionNum: state.sessionNum,
 		fontSize: state.fontSize,
 	};
 };
 
-export default connect(mapStateToProps)(Section7);
+const mapDispatchToProps = (dispatch, ownProps) => {
+	return {
+		dispatch1: () => {
+			dispatch();
+		},
+	};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Section7);

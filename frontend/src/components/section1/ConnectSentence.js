@@ -80,10 +80,12 @@ class ConnectSentence extends Component {
 			question: this.state.question,
 			answer: ans,
 		};
-		await FetchData("/UpdateCATAnswer/32", "PUT", catAns)
+		let id = sessionStorage.getItem("ID");
+		//console.log(id)
+		await FetchData("/UpdateCATAnswer/" + id, "PUT", catAns)
 			.then((res) => res.json())
 			.then((res) => {
-				// console.log("UpdateCATAnswer: " + res);
+				console.log("UpdateCATAnswer: " + res);
 			});
 
 		let judgeOfAnswer;

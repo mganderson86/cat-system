@@ -6,6 +6,7 @@ import Pic from "../../play.png";
 import FetchData from "../utils/FetchData";
 import { NextQuestionButton, SectionBar } from "../utils/Utils";
 
+
 const openNotification = () => {
 	notification.open({
 		message: "You should type an answer to go next.",
@@ -48,7 +49,10 @@ class BreakingWords extends Component {
 			question: this.state.question,
 			answer: this.state.answerText,
 		};
-		await FetchData("/UpdateCATAnswer/32", "PUT", catAns)
+		
+		let id = sessionStorage.getItem("ID");
+		
+		await FetchData("/UpdateCATAnswer/" + id, "PUT", catAns)
 			.then((res) => res.json())
 			.then((res) => {
 				// console.log(res);
@@ -63,7 +67,7 @@ class BreakingWords extends Component {
 			judgeOfAnswer = "w." + this.state.question;
 		}
 
-		console.log(judgeOfAnswer);
+		console.log(judgeOfAnswer)
 
 		await this.props.answerQuestionAns(judgeOfAnswer, this.state.question);
 
@@ -103,12 +107,11 @@ class BreakingWords extends Component {
 		const questionText2 = this.props.curState[this.state.question].text2;
 		const keyword = this.props.curState[this.state.question].keyword;
 		const audio = this.props.curState[this.state.question].audio;
-		const wordBox = require("../../Site/Images/task4_6_wordbox.png");
 
 		return (
 			<div className="main-context-div" style={{ fontSize: this.props.fontSize }}>
 				<div className="breaking_words">
-					<div style={{ marginBottom: "25px", height: "50px" }}>
+					<div style={{ marginBottom: "5px", height: "50px" }}>
 						<img onClick={this.playAudio} src={Pic} height="54px" width="54px" alt="img" />
 						<ReactAudioPlayer
 							style={{ display: this.state.showElem, verticalAlign: "middle" }}
@@ -117,22 +120,19 @@ class BreakingWords extends Component {
 						></ReactAudioPlayer>
 					</div>
 					<Row>
-						<Col span={4}>
+						<Col span={5}>
 							<div
 								style={{
-									color: "black",
-									fontWeight: "bold",
-									backgroundImage: `url(${wordBox})`,
-									backgroundSize: "100% 100%",
-									padding: "5px",
-									paddingRight: "35px",
+									backgroundColor: "lightgreen",
+									width: "160px",
+									borderStyle: "dotted",
 									textAlign: "center",
 								}}
 							>
-								{keyword}
+								{keyword}{" "}
 							</div>
 						</Col>
-						<Col offset={1}>
+						<Col>
 							{questionText1} <input value={this.state.answerText} onChange={this.onChange} />{" "}
 							{questionText2}
 						</Col>

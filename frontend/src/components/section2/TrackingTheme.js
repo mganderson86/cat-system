@@ -60,7 +60,10 @@ class TrackingTheme extends Component {
 			question: this.state.question,
 			answer: ans,
 		};
-		await FetchData("/UpdateCATAnswer/32", "PUT", catAns)
+		
+		let id = sessionStorage.getItem("ID");
+		
+		await FetchData("/UpdateCATAnswer/" + id, "PUT", catAns)
 			.then((res) => res.json())
 			.then((res) => {
 				// console.log(res);

@@ -59,10 +59,13 @@ class ConnectPicture extends Component {
 			question: this.state.question,
 			answer: ans,
 		};
-		await FetchData("/UpdateCATAnswer/32", "PUT", catAns)
+		
+		let id = sessionStorage.getItem("ID");
+
+		await FetchData("/UpdateCATAnswer/" + id, "PUT", catAns)
 			.then((res) => res.json())
 			.then((res) => {
-				// console.log(res);
+				 console.log(res);
 			});
 
 		let judgeOfAnswer;
@@ -85,7 +88,7 @@ class ConnectPicture extends Component {
 			sectionName: "CONNECTIVES_PICTURES",
 			numQuestions: this.props.curState.numQuestions,
 		};
-
+		console.log(data);
 		this.setState({
 			value: -1,
 			radioColor: ["black", "black", "black", "black"],

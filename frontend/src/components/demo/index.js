@@ -77,21 +77,24 @@ const { Title } = Typography;
  };
  
  async function SubmitData (vals) {
+	// console.log(vals) //debug
+
   await FetchData("/InsertStudentInformation", "PUT", vals)
     .then((res) => {
       if (res.status === 200) {
-        return res.json();
+		return res.json()
       } else {
         alert('An error occured adding the information.')
       }
     })
     .then((res) => {
-      if (res.id != "") {
-        this.setState({ id: res.id });
-        this.props.history.push("/section1");
+		//console.log(res)
+      if (res.returnValue === "") {
+		alert('An error occured retrieving a database response.')
       } else {
-        alert('An error occured retrieving a database response.')
-      }
+		sessionStorage.setItem( 'ID', res.returnValue );
+		return true;
+	}
     })
  }
 
@@ -143,6 +146,7 @@ const { Title } = Typography;
            Grade:'',
            Ethnicity: [], 
            EthnicityOther: '',
+		   HomeroomTeacher: '',
            PrimaryLanguage: [],
            OtherLanguageHome: '',
            languagesHome: [],
@@ -210,10 +214,17 @@ const { Title } = Typography;
          })}
          onSubmit={(values, { setSubmitting }) => {
            setTimeout(() => {
-             alert(JSON.stringify(values, null, 2));
+             //alert(JSON.stringify(values, null, 2));
              SubmitData(values);     /*put data to database; will need to get a unique id for next section */
-             setSubmitting(false);
+			 
+			 setSubmitting(false);
            }, 400);
+		   setTimeout(()=> {
+			 if(sessionStorage.getItem("ID") !== '') {
+				this.props.history.push("/section1");
+			}
+		   }, 400);
+		  
          }}
        >
          <Form>
@@ -384,7 +395,7 @@ const { Title } = Typography;
 const mapStateToProps = (state) => {
 	return {
     fontSize: state.fontSize,
-    id: state.id,
+    //id: state.id,
 	};
 };
 

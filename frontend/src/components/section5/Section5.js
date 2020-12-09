@@ -1,26 +1,18 @@
-import { Divider, Typography, notification, Row, Col } from "antd";
+import { Divider, Typography } from "antd";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { FourPictures, NextQuestionButton } from "../utils/Utils";
+import { FourPictures, NextButton } from "../utils/Utils";
 import Pic from "../../play.png";
 import ReactAudioPlayer from "react-audio-player";
 
-const { Title, Text } = Typography;
-
-const openNotification = () => {
-	notification.open({
-		message: "You should select an image to go next.",
-		duration: 2.5,
-	});
-};
+const { Title, Text, Paragraph } = Typography;
 
 class Section5 extends Component {
 	constructor(props) {
 		super();
 		this.state = {
-			selectOption: -1,
+			value: -1,
 			showElem: "none",
-			borderStyle: ["none", "none", "none", "none"],
 		};
 	}
 
@@ -28,22 +20,6 @@ class Section5 extends Component {
 		this.setState({
 			showElem: "inline",
 		});
-	};
-
-	onClick = (e, val) => {
-		this.setState({ selectOption: val });
-		let newBorderStyle = ["none", "none", "none", "none"];
-		newBorderStyle[val - 1] = "solid";
-		this.setState({ borderStyle: newBorderStyle });
-	};
-
-	onClickNext = (e) => {
-		e.preventDefault();
-		if (this.state.selectOption === -1) {
-			openNotification();
-			return;
-		}
-		this.props.history.push("/section5_1");
 	};
 
 	render() {
@@ -83,64 +59,22 @@ class Section5 extends Component {
 						</Title>
 						<Divider style={{ margin: "10px" }} />
 
-						{/* <div style={{ marginBottom: "5px", height: "50px" }}>
+						<div style={{ marginBottom: "5px", height: "50px" }}>
 							<img onClick={this.playAudio} src={Pic} height="54px" width="54px" alt="img" />
 							<ReactAudioPlayer
 								style={{ display: this.state.showElem, verticalAlign: "middle" }}
 								src={audio}
 								controls
 							></ReactAudioPlayer>
-						</div> */}
+						</div>
 
 					</div>
 					<div>
-						{/* <FourPictures picture1={picture1} picture2={picture2} picture3={picture3} picture4={picture4} /> */}
-						<Row justify="space-around" gutter={[16, 24]}>
-							<Col span={10} offset={2}>
-								<img
-									src={picture1}
-									onClick={(e) => this.onClick(e, 1)}
-									style={{ borderStyle: this.state.borderStyle[0] }}
-									alt="img"
-									height="150px"
-								/>
-							</Col>
-
-							<Col span={10}>
-								<img
-									src={picture2}
-									onClick={(e) => this.onClick(e, 2)}
-									style={{ borderStyle: this.state.borderStyle[1] }}
-									alt="img"
-									height="150px"
-								/>
-							</Col>
-						</Row>
-						<Row justify="space-around" gutter={[16, 24]}>
-							<Col span={10} offset={2}>
-								<img
-									src={picture3}
-									onClick={(e) => this.onClick(e, 3)}
-									style={{ borderStyle: this.state.borderStyle[2] }}
-									alt="img"
-									height="150px"
-								/>
-							</Col>
-
-							<Col span={10}>
-								<img
-									src={picture4}
-									onClick={(e) => this.onClick(e, 4)}
-									style={{ borderStyle: this.state.borderStyle[3] }}
-									alt="img"
-									height="150px"
-								/>
-							</Col>
-						</Row>
+						<FourPictures picture1={picture1} picture2={picture2} picture3={picture3} picture4={picture4} />
 					</div>
 				</div>
-				{/* <NextButton link="/section5_1" /> */}
-				<NextQuestionButton getNextQuestion={this.onClickNext} />
+				<NextButton link="/section5_1" />
+															 
 			</div>
 		);
 	}

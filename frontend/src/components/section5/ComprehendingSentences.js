@@ -8,7 +8,7 @@ import { NextQuestionButton, SectionBar } from "../utils/Utils";
 
 const openNotification = () => {
 	notification.open({
-		message: "You should select an image to go next.",
+		message: "You should choose an option to go next.",
 		duration: 2.5,
 	});
 };
@@ -36,6 +36,12 @@ class ComprehendingSentences extends Component {
 		this.setState({ borderStyle: newBorderStyle });
 	};
 
+	playAudio = () => {
+		this.setState({
+			showElem: "inline",
+		});
+	};
+
 	getNextQuestion = async (e) => {
 		if (this.state.selectOption === -1) {
 			openNotification();
@@ -46,7 +52,10 @@ class ComprehendingSentences extends Component {
 			question: this.state.question,
 			answer: this.state.selectOption,
 		};
-		await FetchData("/UpdateCATAnswer/32", "PUT", catAns)
+		
+		let id = sessionStorage.getItem("ID");
+		
+		await FetchData("/UpdateCATAnswer/" + id, "PUT", catAns)
 			.then((res) => res.json())
 			.then((res) => {
 				// console.log(res);
@@ -108,12 +117,11 @@ class ComprehendingSentences extends Component {
 			<div className="main-context-div" style={{ fontSize: this.props.fontSize }}>
 				<div className="comprehending_sentences">
 					<div>
-						<img src={Pic} height="54px" width="54px" alt="img" />
+						<img onClick={this.playAudio} src={Pic} height="54px" width="54px" alt="img" />
 						<ReactAudioPlayer
 							style={{ display: this.state.showElem }}
 							src={audio}
 							controls
-							autoPlay={true}
 						></ReactAudioPlayer>
 					</div>
 					<div>

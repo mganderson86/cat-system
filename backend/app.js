@@ -61,27 +61,50 @@ app.put("/UpdateCATAnswer/:id?", function (req, res) {
 	});
 });
 
-app.put("/InsertStudentInformation/", function (req, res) {
-	const values = req.body.values;
-	
+app.put("/InsertStudentInformation", function (req, res) {
+
+	const FirstName = req.body.FirstName;
+	const LastName = req.body.LastName;
+	const Gender = req.body.Gender;
+	const School = req.body.School;
+	const Grade = req.body.Grade;
+	const Ethnicity = req.body.Ethnicity;
+	const EthnicityOther = req.body.EthnicityOther;
+	const PrimaryLanguage = req.body.PrimaryLanguage;
+	const OtherLanguageHome = req.body.OtherLanguageHome;
+	const languagesHome = req.body.languagesHome;
+	const OtherLanguagePeople = req.body.OtherLanguagePeople + languagesHome;
+	const HomeroomTeacher = req.body.HomeroomTeacher;
+
 	mssql.connect(config, function (err) {
 		if (err) {
 			return callback(err);
         } else 
       	var request = new mssql.Request();
-        values.map((value, key) => {
-            request.input({key}, sql.VarChar, {value})
-        });
+ 		request.input("FirstName", mssql.NVarChar, FirstName)
+		request.input("LastName", mssql.NVarChar, LastName)
+		request.input("Gender", mssql.NVarChar, Gender)
+		request.input("School", mssql.NVarChar, School)
+		request.input("Grade", mssql.NVarChar, Grade)
+		request.input("Ethnicity", mssql.NVarChar, Ethnicity)
+		request.input("EthnicityOther", mssql.NVarChar, EthnicityOther)
+		request.input("PrimaryLanguage", mssql.NVarChar, PrimaryLanguage)
+		request.input("OtherLanguageHome", mssql.NVarChar, OtherLanguageHome)
+		request.input("OtherLanguagePeople", mssql.NVarChar, OtherLanguagePeople)
+		request.input("HomeroomTeacher", mssql.NVarChar, HomeroomTeacher)
         
         request.execute("dbo.InsertStudentInformation", function (err, result) {
 			if (err) {
 				console.log("dbo.InsertStudentInformation: " + err);
 			}
+			
 			let str = JSON.stringify(result);
+			console.log(str)
 			res.send(str); //send to front_end
 		});
 	});
 });
+
 
 require("./routes/nextQuestion")(app);
 

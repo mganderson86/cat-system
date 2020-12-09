@@ -19,6 +19,7 @@ class Section4 extends Component {
 		super();
 
 		this.state = {
+			 
 			showElem: "none",
 		};
 	}
@@ -128,6 +129,7 @@ class Section4 extends Component {
 }
 
 const mapStateToProps = (state) => {
+					
 	return {
 		fontSize: state.fontSize,
 	};

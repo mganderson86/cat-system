@@ -10,7 +10,7 @@ const { Paragraph } = Typography;
 
 const openNotification = () => {
 	notification.open({
-		message: "You should select an option to go next.",
+		message: "You should choose an option to go next.",
 		duration: 2.5,
 	});
 };
@@ -47,7 +47,10 @@ class UnderstandingResponses extends Component {
 			question: this.state.question,
 			answer: this.state.selectOption,
 		};
-		await FetchData("/UpdateCATAnswer/32", "PUT", catAns).then((res) => res.json());
+		
+		let id = sessionStorage.getItem("ID");
+		
+		await FetchData("/UpdateCATAnswer/" + id, "PUT", catAns).then((res) => res.json());
 
 		let judgeOfAnswer;
 		const correctAns = this.props.curState.METALINGUISTIC[this.state.question].answer;
@@ -86,7 +89,7 @@ class UnderstandingResponses extends Component {
 					this.props.clearNumQuestions();
 					this.props.history.push("/");
 				} else {
-					this.setState({ question: res.nextQuestion });
+					this.setState({ question: res.nextQuestion.toLowerCase() });
 				}
 			});
 	};
