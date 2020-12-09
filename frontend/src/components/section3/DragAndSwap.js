@@ -103,7 +103,7 @@ class DragAndSwap extends Component {
 
 		let id = sessionStorage.getItem("ID");
 		
-		await FetchData("/UpdateCATAnswer/" + id, "PUT", catAns)
+		await FetchData("/UpdateCATAnswer/" + id, "PUT", recordAns)
 			.then((res) => res.json())
 			.then((res) => {
 				// console.log(res);
