@@ -6,7 +6,7 @@ import { NextQuestionButton, SectionBar } from "../utils/Utils";
 import Pic from "../../play.png";
 import ReactAudioPlayer from "react-audio-player";
 
-const { Title, Text, Paragraph } = Typography;
+const { Title, Text } = Typography;
 
 const openNotification = () => {
 	notification.open({
@@ -15,10 +15,10 @@ const openNotification = () => {
 	});
 };
 
-function firstUpperCase(s) {
-	return s.replace(/^\S/, (s) => s.toUpperCase());
-}
-
+	function firstUpperCase(s) {
+		return s.replace(/^\S/, (s) => s.toUpperCase());
+	}
+	
 class IdentifyingDefinitions extends Component {
 	constructor(props) {
 		super();
@@ -87,7 +87,10 @@ class IdentifyingDefinitions extends Component {
 		};
 
 		this.setState({
-			selectOption: -1,  
+			selectOption: -1,
+			optionA: -1,
+			optionB: -1,
+			optionC: -1,
 		});
 
 		await FetchData("/sumCorrectIncorrect", "PUT", data)
@@ -118,7 +121,7 @@ class IdentifyingDefinitions extends Component {
 		const questionText2 = this.props.curState.DEFINITIONS_AWARENESS[this.state.question].text2;
 		const questionText3 = this.props.curState.DEFINITIONS_AWARENESS[this.state.question].text3;
 		const keyword = this.props.curState.DEFINITIONS_AWARENESS[this.state.question].keyword;
-	   
+	    const wordBox = require("../../Site/Images/task4_6_wordbox.png");
 
 		return (
 			<div className="main-context-div" style={{ fontSize: this.props.fontSize }}>
@@ -136,13 +139,22 @@ class IdentifyingDefinitions extends Component {
 					</div>
 					{/* Row A */}
 					<Row style={{ paddingTop: "30px", paddingBottom: "30px" }}>
-						<Col span={1} offset={1}>
+						<Col span={1} offset={0}>
 							<Text strong>A.</Text>
 						</Col>
 						<Col span={8}>{questionText1}</Col>
-						<Col span={3} offset={1}>
-							<div>
-
+						<Col span={5} offset={0}>
+						<div
+								style={{
+									color: "black",
+									backgroundImage: `url(${wordBox})`,
+									backgroundSize: "100% 100%",
+									padding: "20px 40px 20px 15px",
+									marginLeft: "5px",
+									marginRight: "5px",
+									textAlign: "center",
+								}}
+							>
 								<Text strong>A </Text> was written for:
 							</div>
 						</Col>
@@ -161,7 +173,7 @@ class IdentifyingDefinitions extends Component {
 								</Radio>
 							</div>
 						</Col>
-						<Col span={2}>
+						<Col span={1}>
 							<div> or</div>
 						</Col>
 						<Col span={4}>
@@ -182,13 +194,22 @@ class IdentifyingDefinitions extends Component {
 					</Row>
 					{/* Row B */}
 					<Row style={{ paddingTop: "30px", paddingBottom: "30px" }}>
-						<Col span={1} offset={1}>
+						<Col span={1} offset={0}>
 							<Text strong>B.</Text>
 						</Col>
 						<Col span={8}>{questionText2}</Col>
-						<Col span={3} offset={1}>
-							<div>
-
+						<Col span={5} offset={0}>
+				<div
+								style={{
+									color: "black",
+									backgroundImage: `url(${wordBox})`,
+									backgroundSize: "100% 100%",
+									padding: "20px 40px 20px 15px",
+									marginLeft: "5px",
+									marginRight: "5px",
+									textAlign: "center",
+								}}
+							>
 								<Text strong>B </Text> was written for:
 							</div>
 						</Col>
@@ -207,8 +228,8 @@ class IdentifyingDefinitions extends Component {
 								</Radio>
 							</div>
 						</Col>
-						<Col span={2}>
-							<div> or</div>
+						<Col span={1}>
+							<div>or</div>
 						</Col>
 						<Col span={4}>
 							<div>
@@ -228,13 +249,23 @@ class IdentifyingDefinitions extends Component {
 					</Row>
 					{/* Row C */}
 					<Row style={{ paddingTop: "30px", paddingBottom: "30px" }}>
-						<Col span={1} offset={1}>
+						<Col span={1} offset={0}>
 							<Text strong>C.</Text>
 						</Col>
 						<Col span={8}>{questionText3}</Col>
-						<Col span={3} offset={1}>
-							<div>
-								<Text strong>C </Text> was written for:
+						<Col span={5} offset={0}>
+						<div
+								style={{
+									color: "black",
+									backgroundImage: `url(${wordBox})`,
+									backgroundSize: "100% 100%",
+									padding: "20px 40px 20px 15px",
+									marginLeft: "5px",
+									marginRight: "5px",
+									textAlign: "center",
+								}}
+			>
+								<Text strong>c </Text> was written for:
 							</div>
 						</Col>
 						<Col span={4}>
@@ -252,7 +283,7 @@ class IdentifyingDefinitions extends Component {
 								</Radio>
 							</div>
 						</Col>
-						<Col span={2}>
+						<Col span={1}>
 							<div> or</div>
 						</Col>
 						<Col span={4}>
