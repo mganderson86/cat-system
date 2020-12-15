@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Pic from "../../play.png";
 import ReactAudioPlayer from "react-audio-player";
 
-const { Title, Text, Paragraph } = Typography;
+const { Title, Text } = Typography; //removed Paragraph, not used
 
 class Section7 extends Component {
 	constructor(props) {
@@ -139,7 +139,7 @@ class Section7 extends Component {
 					<div style={{ margin: "40px", display: "flex", justifyContent: "center", alignItems: "center" }}>
 						<Radio.Group onChange={this.onChange} value={this.state.value} size="large">
 							<Radio value={1} style={{ color: "black" }}>
-								Yes
+								YES
 							</Radio>
 							<Radio value={2} style={{ color: "black", fontSize: this.props.fontSize }}>
 								maybe YES

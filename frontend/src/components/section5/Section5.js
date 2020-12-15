@@ -5,7 +5,7 @@ import { FourPictures, NextButton } from "../utils/Utils";
 import Pic from "../../play.png";
 import ReactAudioPlayer from "react-audio-player";
 
-const { Title, Text, Paragraph } = Typography;
+const { Title, Text } = Typography; //removed Paragraph, not used
 
 class Section5 extends Component {
 	constructor(props) {

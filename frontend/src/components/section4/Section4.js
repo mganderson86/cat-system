@@ -1,18 +1,18 @@
-import { Col, Divider, Row, Typography, notification } from "antd";
+import { Col, Divider, Row, Typography } from "antd"; // removed notification, the function it was used in is not called
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { NextButton } from "../utils/Utils";
 import Pic from "../../play.png";
 import ReactAudioPlayer from "react-audio-player";
 
-const { Title, Text, Paragraph } = Typography;
+const { Title, Text } = Typography; //removed Paragraph, not used
 
-const openNotification = () => {
+/*const openNotification = () => { //this function is not called
 	notification.open({
 		message: "You should type an answer to go next.",
 		duration: 2.5,
 	});
-};
+};*/
 
 class Section4 extends Component {
 	constructor(props) {

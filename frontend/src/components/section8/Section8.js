@@ -2,8 +2,10 @@ import { Button, Col, Divider, Radio, Row, Typography } from "antd";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+/* these hooks are not used in this page
 import Pic from "../../play.png";
 import ReactAudioPlayer from "react-audio-player";
+*/
 
 const { Title, Text, Paragraph } = Typography;
 
@@ -32,7 +34,7 @@ class Section8 extends Component {
 	render() {
 		const img1 = require("../../Site/section8_images/meta_example.png");
 		const bubble = require("../../Site/section8_images/meta_speechbubble.png");
-		const audio = "../../Site/audio/Task_8_Understanding_Responses_Directions.mp3";
+		//const audio = "../../Site/audio/Task_8_Understanding_Responses_Directions.mp3"; //assigned but not used
 
 		const radioStyle = {
 			display: "block",

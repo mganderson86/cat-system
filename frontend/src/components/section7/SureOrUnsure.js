@@ -96,7 +96,7 @@ class SureOrUnsure extends Component {
 
 	render() {
 		const img1 = require("../../Site/Images/sure_or_unsure_ex1.png");
-		const img2 = require("../../Site/Images/sure_or_unsure_ex2.png");									   
+		//const img2 = require("../../Site/Images/sure_or_unsure_ex2.png");			// assigned but not used?						   
 		const questionText0 = this.props.curState.EPISTEMIC_MARKERS[this.state.question].text0;
 		const questionText1 = this.props.curState.EPISTEMIC_MARKERS[this.state.question].text1;
 		const questionText2 = this.props.curState.EPISTEMIC_MARKERS[this.state.question].text2;
@@ -156,7 +156,7 @@ class SureOrUnsure extends Component {
 
 					<div style={{ margin: "40px", display: "flex", justifyContent: "center", alignItems: "center" }}>
 						<Radio.Group onChange={this.onChange} value={this.state.selectOption}>
-							<Radio value={1}>Yes</Radio>
+							<Radio value={1}>YES</Radio>
 							<Radio value={2}>maybe YES</Radio>
 							<Radio value={3}>maybe NO</Radio>
 							<Radio value={4}>NO</Radio>

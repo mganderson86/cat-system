@@ -1,7 +1,7 @@
-import { Button, Divider, Radio, Typography } from "antd";
+import { Divider, Radio, Typography } from "antd"; //removed Button, not used
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom"; //not used on this page
 import ReactAudioPlayer from "react-audio-player";
 									  
 import Pic from "../../play.png";

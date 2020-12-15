@@ -1,7 +1,7 @@
-import { Button, Col, Divider, Radio, Row, Typography } from "antd";
+import { Col, Divider, Radio, Row, Typography } from "antd"; //Button is not used in this page
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+/* import { Link } from "react-router-dom"; // not used in this page */
 import { TwoPictures } from "../utils/Utils";
 import { NextButton } from "../utils/Utils";
 
@@ -37,7 +37,7 @@ class Section1 extends Component {
 		const questionText2 = " Jim wears sandals.";
 		const picture1 = require("../../Site/Images/ConnectingIdeaExamplePic1.jpg");
 		const picture2 = require("../../Site/Images/ConnectingIdeaExamplePic2.jpg");
-		const audio = "../../Site/audio/Task_1_Connecting_Ideas_Directions.mp3";
+		//const audio = "../../Site/audio/Task_1_Connecting_Ideas_Directions.mp3"; //not called
 
 		return (
 			<div className="main-context-div" style={{ fontSize: this.props.fontSize }}>
