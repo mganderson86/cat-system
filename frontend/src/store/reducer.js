@@ -788,7 +788,7 @@ export const defaultState = {
 		answer: ["scandal", "scandel", "scandil", "scandol", "scandul"],
 		audio: "../Site/audio/Morpho_scandalous.mp3",
 	},
-	Morpho_abundant: {
+	Morpho_abundance: {
 		text1: "There was an",
 		text2: "of cookies at the bakery.",
 		keyword: "abundant",
