@@ -89,7 +89,7 @@ class UnderstandingResponses extends Component {
 					this.props.clearNumQuestions();
 					this.props.history.push("/ending");
 				} else {
-					this.setState({ question: res.nextQuestion.toLowerCase() });
+					this.setState({ question: res.nextQuestion });
 				}
 			});
 	};

@@ -39,7 +39,7 @@ export const defaultState = {
 			text3: "Finally, uniforms cost less, so families will spend less money.",
 			text4: "I think students should wear uniforms to school.",
 			text5: "One reason is that with uniforms, students will pay less attention to clothes and more attention to learning.",
-			text6: "For example, a student at a school with uniforms said, ìEveryone works hard. Nobody pays attention to clothes.î",
+			text6: "For example, a student at a school with uniforms said, \"Everyone works hard. Nobody pays attention to clothes.\"",
 			fullAnswer: ["465123"],
 			partAnswer: ["456123"],
 			lessAnswer: ["060100"],
@@ -1273,7 +1273,7 @@ export const defaultState = {
 			newspaper: "Newspaper:",
 			news: "Recess is the perfect time for students to build friendships.",
 			people: "Maria's essay",
-			idea: "Students should have recess because it ìis the perfect time for students to build friendships.î",
+			idea: "Students should have recess because it \"is the perfect time for students to build friendships.\"",
 			ask: "In her essay, Maria is...",
 			img: "meta_citing.png",
 			options: [
