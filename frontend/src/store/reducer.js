@@ -22,8 +22,7 @@ export const defaultState = {
 			title: "Healthier School Lunches",
 			numOfText: 5,
 			text1: "Another reason is that not all students like the same food, so students need more choices.",
-			text2:
-				"That's why I think healthier food, more choices, and more food would make our school lunches better.",
+			text2: "That's why I think healthier food, more choices, and more food would make our school lunches better.",
 			text3: "One reason is that students need healthier food to stay healthy.",
 			text4: "I believe that students should get better lunches at school.",
 			text5: "Finally, some students are still hungry after lunch, so each student should get more food.",
@@ -39,10 +38,8 @@ export const defaultState = {
 			text2: "In conclusion, wearing uniforms to school is better because it solves many problems.",
 			text3: "Finally, uniforms cost less, so families will spend less money.",
 			text4: "I think students should wear uniforms to school.",
-			text5:
-				"One reason is that with uniforms, students will pay less attention to clothes and more attention to learning.",
-			text6:
-				"For example, a student at a school with uniforms said, ìEveryone works hard. Nobody pays attention to clothes.î",
+			text5: "One reason is that with uniforms, students will pay less attention to clothes and more attention to learning.",
+			text6: "For example, a student at a school with uniforms said, ìEveryone works hard. Nobody pays attention to clothes.î",
 			fullAnswer: ["465123"],
 			partAnswer: ["456123"],
 			lessAnswer: ["060100"],
@@ -51,16 +48,12 @@ export const defaultState = {
 		Anagram_gender_B: {
 			title: "Separate classrooms for boys and girls?",
 			numOfText: 6,
-			text1:
-				"In conclusion, having separate classes for boys and girls is a good way to improve students' learning.",
-			text2:
-				"One the one hand, many people say that having separate classes for boys and girls is a good idea because students learn more.",
+			text1: "In conclusion, having separate classes for boys and girls is a good way to improve students' learning.",
+			text2: "One the one hand, many people say that having separate classes for boys and girls is a good idea because students learn more.",
 			text3: "Should boys and girls be in separate classes in school?",
-			text4:
-				"On the other hand, others argue that separate classes are not a good idea because boys and girls need to learn to work together.",
+			text4: "On the other hand, others argue that separate classes are not a good idea because boys and girls need to learn to work together.",
 			text5: "Lastly, recent reports say that boys and girls in separate classes pay more attention to teachers.",
-			text6:
-				"However, I think that separate classes for boys and girls are better because students feel safer and they also participate more in class discussions.",
+			text6: "However, I think that separate classes for boys and girls are better because students feel safer and they also participate more in class discussions.",
 			fullAnswer: ["621354"],
 			partAnswer: ["521364", "421365"],
 			lessAnswer: ["601000"],
@@ -71,8 +64,7 @@ export const defaultState = {
 			numOfText: 6,
 			text1: "In conclusion, having separate classes for boys and girls improves their learning.",
 			text2: "Lastly, boys and girls participate more in class discussions when they are separated.",
-			text3:
-				"Another reason is that boys and girls pay less attention to clothes and looks when they are in separate classes.",
+			text3: "Another reason is that boys and girls pay less attention to clothes and looks when they are in separate classes.",
 			text4: "For instance, a 4th-grade girl said that she speaks up much more in class in her all-girls school.",
 			text5: "One reason is that boys and girls in separate classes feel safer and study more.",
 			text6: "In my opinion, boys and girls should be in separate classrooms for several reasons.",
@@ -84,7 +76,7 @@ export const defaultState = {
 		Anagram_catsordogs: {
 			title: "Cats or dogs?",
 			numOfText: 3,
-			text1: "You can play with your dog and take your dog on walks.",
+			text1: "You can play with your dog and take your dog out.",
 			text2: "That is why dogs are the best pets.",
 			text3: "Some people say that cats are the best pets, but dogs are better pets.",
 			fullAnswer: ["231"],
@@ -93,9 +85,9 @@ export const defaultState = {
 		Anagram_swimming: {
 			title: "Swimming",
 			numOfText: 3,
-			text1: "When you go swimming you can stay close to beach.",
+			text1: "When you swim in a small lake you can stay close to shore.",
 			text2: "That is why I believe that swimming is safe.",
-			text3: "Some people say that swimming in the lake is scary, but it is safe.",
+			text3: "Some people say that swimming in the lake is risky, but I think swimming in small lakes is safe.",
 			fullAnswer: ["231"],
 			audio: "../Site/audio/Anagram_swimming.mp3",
 		},
@@ -103,9 +95,9 @@ export const defaultState = {
 			title: "Rain",
 			numOfText: 4,
 			text1: "If you do not have rain boots, your feet will get wet when you walk to school.",
-			text2: "This is why school should be closed when it rains.",
-			text3: "I think that there should be no school when it rains outside.",
-			text4: "Also, it is very hard to keep your backpack dry when it is raining.",
+			text2: "This is why school should close when it rains.",
+			text3: "I think that there should be no school when it rains.",
+			text4: "Also, it is hard to keep your backpack dry when it is raining.",
 			fullAnswer: ["2413"],
 			audio: "../Site/audio/Anagram_rain.mp3",
 		},
@@ -113,8 +105,8 @@ export const defaultState = {
 			title: "Salad",
 			numOfText: 4,
 			text1: "Salad is healthier than ice cream.",
-			text2: "You can put all different types of vegetables in salad.",
-			text3: "As a result, salad is filled with lots of vitamins. ",
+			text2: "As a result, a salad has lots of vitamins.",
+			text3: "You can put all different types of vegetables in salad.",
 			text4: "This is why salad is a healthy food.",
 			fullAnswer: ["1324"],
 			audio: "../Site/audio/Anagram_salad.mp3",
@@ -122,9 +114,8 @@ export const defaultState = {
 		Anagram_naptime: {
 			title: "Naptime!",
 			numOfText: 4,
-			text1:
-				"I believe that there should be time to nap during school so students can stay awake during classes.",
-			text2: "In conclusion, all schools should give students time to nap during the day.",
+			text1: "I believe that students should get time to nap during school so they can stay awake during classes.",
+			text2: "In conclusion, schools should give students time to nap during the day.",
 			text3: "Another reason is that having good rest will make students remember more during the day.",
 			text4: "First, many students have to stay up late working on homework so they do not get enough sleep.",
 			fullAnswer: ["1432"],
@@ -133,13 +124,11 @@ export const defaultState = {
 		Anagram_books: {
 			title: "Books!",
 			numOfText: 5,
-			text1:
-				"To start, books allow the person to make a movie in their head by using their imagination as they read.",
-			text2: "Also, people can learn new words and learn about many new places by reading books.",
+			text1: "To start, when reading a book, people use their imagination to make a movie of what they read.",
+			text2: "Also, people can learn new words when they read books.",
 			text3: "In my opinion, books are better than movies.",
 			text4: "Are books better than movies?",
-			text5:
-				"In conclusion, books are better than movies because they give readers a chance to use their imagination to think about new ideas.",
+			text5: "In conclusion, books are better than movies because readers can use their imagination more and learn more words.",
 			fullAnswer: ["34215"],
 			audio: "../Site/audio/Anagram_books.mp3",
 		},
@@ -147,14 +136,11 @@ export const defaultState = {
 			title: "Cooking!",
 			numOfText: 6,
 			text1: "I believe it is better to cook meals at home than to eat at restaurants.",
-			text2:
-				"Others may say that it is better to eat at a restaurant because this allows you to take time to relax after your day.",
-			text3:
-				"Additionally, when you cook at home you can increase your math skills by measuring the ingredients.",
-			text4: "One reason is that cooking food at home gives you chance to choose healthier food options.",
-			text5:
-				"In conclusion, it is better to prepare your food at home than to go out for a meal because you have greater control over the types of food you eat, more chances to practice math skills and more time to relax!",
-			text6: "I do not agree because I think it is actually more relaxing to cook in your home. ",
+			text2: "Others may say that eating at a restaurant is better because you can relax without working.",
+			text3: "Additionally, when you cook at home you can have fun preparing your favorite food with your family.",
+			text4: "One reason is that at home you can cook healthier food.",
+			text5: "In conclusion, it is better to cook at home because you can eat healthier food, you have more fun and you relax more!",
+			text6: "Yet, I do not agree because I think it is more relaxing to cook in your home.",
 			fullAnswer: ["143265", "135264"],
 			partAnswer: ["100260"],
 			lessAnswer: ["100060"],
@@ -163,15 +149,12 @@ export const defaultState = {
 		Anagram_pets: {
 			title: "Pets at school",
 			numOfText: 6,
-			text1:
-				"In conclusion, to create a relaxing class atmosphere and provide chances to learn about animals, pets should be allowed at school. ",
-			text2:
-				"Furthermore, other types of pets, such as snakes, are really interesting and so students could be provided with opportunities to learn about these animals if these pets were allowed in class.",
+			text1: "In conclusion, pets should be allowed at school to help students relax, be happy and learn more.",
+			text2: "Furthermore, students can learn a lot from different pets, like dogs, cats or birds.",
 			text3: "Students should be allowed to bring their pets to school.",
-			text4: "First, dogs and cats can provide students company during their classes.",
-			text5: "Some people think dogs and snakes can be scary for some children.",
-			text6:
-				"I disagree because students can learn how to care for different types of pets so they are not scared anymore.",
+			text4: "First, pets can make students happy during their classes.",
+			text5: "Some people think pets in the classroom will be bad for learning.",
+			text6: "I disagree because pets can help students relax and learn better.",
 			fullAnswer: ["631245", "653412"],
 			partAnswer: ["600045", "600012", "630200", "650400"],
 			lessAnswer: ["601000"],
@@ -180,14 +163,11 @@ export const defaultState = {
 		Anagram_bikesorcars: {
 			title: "Bicycles or cars!!",
 			numOfText: 6,
-			text1: "I disagree with that because some bicycles are built to carry multiple people. ",
-			text2:
-				"Exercise is something that each person should do to keep healthy, but it can be a challenge to find the time to workout.",
-			text3:
-				"However, some may say that bicycles are not as useful as cars because only one person can fit on a bicycle at a time.",
+			text1: "I disagree with that because some bicycles can fit many people.",
+			text2: "Bicycles are better because exercise is good for people to stay healthy.",
+			text3: "However, some say that bicycles are not as useful as cars because only one person can fit on a bicycle at a time.",
 			text4: "This is why I believe that bicycles are the best choice for transportation.",
-			text5:
-				"In particular, bicycles allow you to exercise while you travel from place to place, which allows many people to fit in a workout during a busy day.",
+			text5: "In particular, people can use bicycles to go to work, so they can exercise during their busy day.",
 			text6: "I think that using a bicycle is better than driving a car.",
 			fullAnswer: ["524631", "534621", "423651"],
 			lessAnswer: ["000601"],
@@ -196,15 +176,11 @@ export const defaultState = {
 		Anagram_cellphones: {
 			title: "Cell Phones!",
 			numOfText: 6,
-			text1:
-				"Conversely, other people say that cell phones can distract students when they are used in the classroom.",
-			text2:
-				"I disagree with that because students need to learn how to focus during school even if they have their cell phones.",
-			text3:
-				"In conclusion, I believe students should be allowed to use cell phones during school to conduct research and learn to be focused.",
-			text4:
-				"Having a calculator on his or her phone will allow students to be successful in math and science because both classes often require students to solve math problems.",
-			text5: "Cell phones have many important applications such as the calculator.",
+			text1: "Conversely, other people say that cell phones should not be allowed in schools because they distract students.",
+			text2: "I disagree with that because students need to learn how to focus in class even if they have their cell phones.",
+			text3: "In conclusion, I believe cell phones are useful during school classes to use important applications and to learn to be focused.",
+			text4: "In particular, the calculator in the cell phone is easy to use and students do not have to spend more money to buy a calculator for math.",
+			text5: "Cell phones have many important applications, such as the calculator.",
 			text6: "I think that students should be allowed to use cell phones during school.",
 			fullAnswer: ["456321", "236541"],
 			lessAnswer: ["006001"],
@@ -325,9 +301,9 @@ export const defaultState = {
 		audio: "../Site/audio/Connect_pic_inotherwords.mp3",
 	},
 	Connect_pic_similarly: {
-		text: "Grapes come in many different colors. _________, roses can also have many colors.",
+		text: "Grapes come in many different colors. _________, roses can also come in many different colors.",
 		text1: "Grapes come in many different colors. ",
-		text2: ", roses can also have many colors.",
+		text2: ", roses can also come in many different colors.",
 		choice: ["Because", "But", "However", "Similarly"],
 		answer: 4,
 		picture1: require("../Site/Images/Connect_pic_similarly_1.jpg"),
@@ -335,9 +311,9 @@ export const defaultState = {
 		audio: "../Site/audio/Connect_pic_similarly.mp3",
 	},
 	Connect_pic_onthecontrary: {
-		text: "Many people think that whales are fish. _______, they are mammals.",
-		text1: "Many people think that whales are fish. ",
-		text2: ", they are mammals.",
+		text: "Many people think that elephants are the largest animals. _______, blue whales are the largest animals.",
+		text1: "Many people think that elephants are the largest animals. ",
+		text2: ", blue whales are the largest animals.",
 		choice: ["Therefore", "Furthermore", "On the contrary", "Hence"],
 		answer: 3,
 		picture1: require("../Site/Images/Connect_pic_onthecontrary_1.jpg"),
@@ -345,9 +321,9 @@ export const defaultState = {
 		audio: "../Site/audio/Connect_pic_onthecontrary.mp3",
 	},
 	Connect_pic_asaconsequence: {
-		text: "During the class trip, the bus broke down. ________, we were not able to go to the museum.",
+		text: "During the class trip, the bus broke down. ________, students were not able to go to the museum.",
 		text1: "During the class trip, the bus broke down. ",
-		text2: ", we were not able to go to the museum.",
+		text2: ", students were not able to go to the museum.",
 		choice: ["As a consequence", "But", "However", "Similarly"],
 		answer: 1,
 		picture1: require("../Site/Images/Connect_pic_asaconsequence_1.jpg"),
@@ -431,7 +407,7 @@ export const defaultState = {
 		choice: [
 			"some adults also enjoy reading.",
 			"some students prefer to watch movies.",
-			"some students read comic books.",
+			"some students read chapter books.",
 		],
 		answer: 2,
 		audio: "../Site/audio/Connect_sent_however_B.mp3",
@@ -542,7 +518,7 @@ export const defaultState = {
 		text1: "The Earth rotates on its axis once every 24 hours.",
 		keyword: "It",
 		text2: "orbits the sun once every 365 days.",
-		choice: ["The Earth", "The Earth’s axis", "The Sun"],
+		choice: ["the Earth", "its axis", "the Sun"],
 		answer: 1,
 		audio: "../Site/audio/Anaphora_earth.mp3",
 	},
@@ -551,18 +527,18 @@ export const defaultState = {
 			"During the Olympic Games, countries from around the world send athletes to compete in various sporting events.",
 		keyword: "These competitions",
 		text2: "are divided into two categories: winter and summer.",
-		choice: ["Countries from around the world", "athletes", "sporting events"],
+		choice: ["countries from around the world", "athletes", "Olympic Games"],
 		answer: 3,
 		audio: "../Site/audio/Anaphora_olympicgames.mp3",
 	},
-	Anaphora_chemical: {
+	Anaphora_covered: {
 		text1:
 			"Mars’ red color comes from a chemical in its soil. When this chemical touches oxygen, it rusts and becomes red in color. How exactly the entire planet came to be covered in this red soil is a subject of debate among scientists. Some believe that",
 		keyword: "this process",
 		text2: "occurred long ago when water still flowed on Mars’ surface, spreading the dust across the planet.",
-		choice: ["Mars’ red color", "Chemical touches oxygen", "the planet came to be covered in red soil"],
+		choice: ["a debate among scientists", "this chemical touches oxygen", "the planet came to be covered in red soil"],
 		answer: 3,
-		audio: "../Site/audio/Anaphora_chemical.mp3",
+		audio: "../Site/audio/Anaphora_covered.mp3",
 	},
 	Anaphora_difficultplane: {
 		text1:
@@ -572,35 +548,35 @@ export const defaultState = {
 		choice: [
 			"the Wright brothers flew their first airplane",
 			"the pilot laid on his stomach",
-			"the plane was difficult to control and was damaged",
+			"the plane was difficult to control",
 		],
 		answer: 3,
 		audio: "../Site/audio/Anaphora_difficultplane.mp3",
 	},
 	Anaphora_scienceprojects: {
 		text1:
-			"For weeks, the class prepared their science projects. Finally, the day of the Science Fair arrived and students were excited to showcase their",
+			"For weeks, the class prepared their science projects. Finally, the day of the Science Fair arrived and students were excited to show their",
 		keyword: "hard work",
 		text2: ".",
-		choice: ["week", "the class", "the science projects"],
+		choice: ["Science Fair", "the class", "the science projects"],
 		answer: 3,
 		audio: "../Site/audio/Anaphora_scienceprojects.mp3",
 	},
 	Anaphora_animals: {
 		text1:
-			"During the school trip to the zoo, many of the students noticed that the animals were all sleeping out of sight. They didn’t seem like",
+			"During the school trip to the zoo, many of the students noticed that the animals were all sleeping. It seemed like",
 		keyword: "they",
-		text2: "wanted to be bothered with the visitors.",
-		choice: ["the animals", "the trip", "the zoo"],
+		text2: "did not want to be bothered with the visitors.",
+		choice: ["the animals", "the students", "the visitors"],
 		answer: 1,
 		audio: "../Site/audio/Anaphora_animals.mp3",
 	},
 	Anaphora_telescope: {
 		text1:
-			"The scientist worked to get the telescope ready for the meteor shower. Working tirelessly for months the day final came for the",
+			"The scientist worked to get the telescope ready for the meteor shower. Working tirelessly for months the day finally came for the",
 		keyword: "project",
 		text2: "to be realized.",
-		choice: ["the telescope", "the meteor shower", "working tirelessly"],
+		choice: ["get the telescope ready", "watching the meteor shower", "working tirelessly"],
 		answer: 1,
 		audio: "../Site/audio/Anaphora_telescope.mp3",
 	},
@@ -608,17 +584,17 @@ export const defaultState = {
 		text1: "For the students,",
 		keyword: "the time",
 		text2: "had come. After months of studying they were finally ready to take their state exam.",
-		choice: ["the state exam", "studying", "the students"],
+		choice: ["the moment to take the state exam", "the months of studying", "the students had come"],
 		answer: 1,
 		audio: "../Site/audio/Anaphora_stateexam.mp3",
 	},
 	Anaphora_financialfallout: {
 		text1:
-			"When the financial fallout of the Great Depression began in the mid 1920’s the country could not predict its eventual impact. It was a time of",
-		keyword: "great turmoil",
-		text2: "for the United States that would soon define the nation’s trajectory.",
-		choice: ["the financial fallout", "the Great Depression", "c)	the impact"],
-		answer: 3,
+			"When the financial fallout began in the mid 1920’s, the country could not predict its eventual impact on individuals with no involvement in stock trading.",
+		keyword: "It",
+		text2: "was this event that led to a decade of tremendous financial hardship, known as the Great Depression, which would shape the lives of millions of people worldwide and lead to distrust of Wall Street.",
+		choice: ["the financial fallout", "the Great Depression", "decade of tremendous financial hardship"],
+		answer: 1,
 		audio: "../Site/audio/Anaphora_financialfallout.mp3",
 	},
 	// Section 4
@@ -789,11 +765,11 @@ export const defaultState = {
 		audio: "../Site/audio/Morpho_scandalous.mp3",
 	},
 	Morpho_abundance: {
-		text1: "There was an",
-		text2: "of cookies at the bakery.",
-		keyword: "abundant",
+		text1: "Water is",
+		text2: "on Earth.",
+		keyword: "abundance",
 		answer: ["abundant", "abundent", "abundint", "abundunt"],
-		audio: "../Site/audio/Morpho_abundant.mp3",
+		audio: "../Site/audio/Morpho_abundance.mp3",
 	},
 	// Section 5
 	SYNTAX_PICTURES: {
@@ -928,8 +904,8 @@ export const defaultState = {
 		},
 		def_aware_concert: {
 			text1: "A concert is a musical performance given in public.",
-			text2: "A concert is where you go to listen to music with other people.",
-			text3: "A concert is somewhere people go to hear music with others.",
+			text2: "A concert is when you go to listen to music with other people.",
+			text3: "A concert is something one attends to hear music with others.",
 			keyword: "Concert",
 			answer: [2, 1, 2, 1],
 			audio: "../Site/audio/def_aware_concert.mp3",
@@ -1331,7 +1307,7 @@ export const defaultState = {
 			news: "Music makes students happy.",
 			people: "Jenny said",
 			idea: "Yes, music makes all students happier than anything else in the world.",
-			ask: "In the sentence above, Jenny is giving...",
+			ask: "In the sentence above, Jenny presents...",
 			img: "meta_exaggeration.png",
 			options: ["a disagreement ", "an exaggeration  ", "a clarification", "an explanation "],
 			answer: 2,
@@ -1341,7 +1317,7 @@ export const defaultState = {
 			newspaper: "Newspaper:",
 			news: "Music makes students happy.",
 			people: "Chang's essay",
-			idea: "Students were happy when the teacher played music.",
+			idea: "Students in my class were happy when the teacher played music.",
 			ask: "In his essay, Chang presents...",
 			img: "meta_example.png",
 			options: ["an example", "a rebuttal ", "a contrast", "a summary "],
@@ -1369,7 +1345,7 @@ export const defaultState = {
 			options: [
 				"emphasizing the newspaper's idea ",
 				"contradicting the newspaper's idea ",
-				"understating the newspaper's idea ",
+				"restating the newspaper's idea ",
 				"underscoring the newspaper's idea ",
 			],
 			answer: 2,
@@ -1398,7 +1374,7 @@ export const defaultState = {
 			idea: "In my opinion, music does not make all students happy.",
 			ask: "In her essay, Shondra presents...",
 			img: "meta_position.png",
-			options: ["a source ", "an explanation ", "a definition ", "a position "],
+			options: ["a fact ", "an explanation ", "a definition ", "a position "],
 			answer: 4,
 			audio: "../Site/audio/meta_position.mp3",
 		},
@@ -1439,7 +1415,7 @@ export const defaultState = {
 			news: "Music makes students happy.",
 			people: "Kejia's essay",
 			idea: "Music does not make me happy, so it does not make anyone happy.",
-			ask: "In the sentence above, Kejia is giving...",
+			ask: "In the sentence above, Kejia presents...",
 			img: "meta_fallacy.png",
 			options: ["a fallacy ", "an understatement ", "a paraphrase ", "a citation "],
 			answer: 1,
