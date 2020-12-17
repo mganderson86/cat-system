@@ -47,7 +47,7 @@
 
 .item2 {
 	background: white;
-	margin: 15px auto;
+	margin: 10px auto;
 	flex-grow: 1;
 	width: 90%;
 	display: flex;
@@ -55,5 +55,5 @@
 	align-items: center;
 	border-style: dotted;
 	text-align: center;
-	min-height: 5px;
+	min-height: 10px;
 }
