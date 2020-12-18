@@ -76,27 +76,6 @@ const { Title } = Typography;
    );
  };
  
- async function SubmitData (vals) {
-	// console.log(vals) //debug
-
-  await FetchData("/InsertStudentInformation", "PUT", vals)
-    .then((res) => {
-      if (res.status === 200) {
-		return res.json()
-      } else {
-        alert('An error occured adding the information.')
-      }
-    })
-    .then((res) => {
-		//console.log(res)
-      if (res.returnValue === "") {
-		alert('An error occured retrieving a database response.')
-      } else {
-		sessionStorage.setItem( 'ID', res.returnValue );
-		return true;
-	}
-    })
- }
 
  // And now we can use these
  class SignupForm extends React.Component {
@@ -108,6 +87,29 @@ const { Title } = Typography;
     showP: false,
     showH: false
   }
+
+  SubmitData = async(vals) => {
+    // console.log(vals) //debug
+  
+    await FetchData("/InsertStudentInformation", "PUT", vals)
+      .then((res) => {
+        if (res.status === 200) {
+          return res.json()
+        } else {
+          alert('An error occured adding the information.')
+        }
+      })
+      .then((res) => {
+      //console.log(res)
+        if (res.returnValue === "") {
+          alert('An error occured retrieving a database response.')
+        } else {
+          sessionStorage.setItem( 'ID', res.returnValue );
+          this.props.history.push("/section1");
+        }
+      })
+      .catch(err => console.error(err));
+   }
 
   setShowEthnicity = () => {
     this.setState(prevState => ({
@@ -141,12 +143,13 @@ const { Title } = Typography;
          initialValues={{
            FirstName: '',
            LastName: '',
+           SchoolID: '',
            Gender: '',
            School: '',
            Grade:'',
            Ethnicity: [], 
            EthnicityOther: '',
-		   HomeroomTeacher: '',
+           HomeroomTeacher: '',
            PrimaryLanguage: [],
            OtherLanguageHome: '',
            languagesHome: [],
@@ -159,6 +162,9 @@ const { Title } = Typography;
            LastName: Yup.string()
              .max(20, 'Must be 20 characters or less')
              .required('Please provide your Last Name.'),
+           SchoolID: Yup.string()
+             .length(6, 'Should be 6 digits')
+             .required('Please provide your 6 digit School ID number.'),
            Gender: Yup.string()
              .oneOf(
                ['boy', 'girl', 'other'],
@@ -215,16 +221,10 @@ const { Title } = Typography;
          onSubmit={(values, { setSubmitting }) => {
            setTimeout(() => {
              //alert(JSON.stringify(values, null, 2));
-             SubmitData(values);     /*put data to database; will need to get a unique id for next section */
-			 
-			 setSubmitting(false);
-           }, 400);
-		   setTimeout(()=> {
-			 if(sessionStorage.getItem("ID") !== '') {
-				this.props.history.push("/section1");
-			}
-		   }, 400);
-		  
+             this.SubmitData(values);     /*put data to database; will need to get a unique id for next section */
+             setSubmitting(false);
+           }, 1000);
+
          }}
        >
          <Form>
@@ -242,6 +242,15 @@ const { Title } = Typography;
              name="LastName"
              type="text"
              placeholder="Doe"
+           />
+           </div>
+           <div>
+           <MyTextInput
+             label="School ID"
+             name="SchoolID"
+             type="number"
+             placeholder="000000"
+             maxLength="6"
            />
            </div>
            <div>
