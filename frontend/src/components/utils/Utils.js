@@ -11,8 +11,8 @@ export function TwoPictures(props) {
 			<Col span={10}>
 				<img
 					src={props.picture1}
-					width="100%"
-					height="260px"
+					//width="100%"
+					//height="260px"
 					style={{
 						position: "relative",
 						left: "50%",
@@ -27,8 +27,8 @@ export function TwoPictures(props) {
 			<Col span={10}>
 				<img
 					src={props.picture2}
-					width="100%"
-					height="260px"
+					//width="100%"
+					//height="260px"
 					style={{
 						position: "relative",
 						left: "50%",
@@ -93,7 +93,7 @@ export function SectionBar(props) {
 		<div
 			style={{
 				height: "40px",
-				borderStyle: "dotted",
+				border: "#CCC dotted",
 				width: "100%",
 				marginTop: "60px",
 				display: "flex",

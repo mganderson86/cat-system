@@ -95,7 +95,8 @@ class SureOrUnsure extends Component {
 	};
 
 	render() {
-		const img1 = require("../../Site/Images/sure_or_unsure_ex1.png");
+		//const img1 = require("../../Site/Images/sure_or_unsure_ex1.png");
+		const img1 = require("../../Site/Images/" + this.props.curState.EPISTEMIC_MARKERS[this.state.question].img);
 		//const img2 = require("../../Site/Images/sure_or_unsure_ex2.png");			// assigned but not used?						   
 		const questionText0 = this.props.curState.EPISTEMIC_MARKERS[this.state.question].text0;
 		const questionText1 = this.props.curState.EPISTEMIC_MARKERS[this.state.question].text1;
@@ -111,7 +112,7 @@ class SureOrUnsure extends Component {
 					<Title level={3} align="left">
 						{curDescription.title1}
 					</Title>
-					<Divider />
+					<Divider style={{ margin: "10px" }} />
 					<div className="green-text">
 						<Title level={4} align="left">
 							{curDescription.title2}

@@ -11,8 +11,17 @@
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
+  .text-input {
+    margin-bottom: 10px;
+  }
+  label.text-input {
+    margin-right: 10px;
+  }
   .error {
     color: red;
+  }
+  .ant-layout {
+    background: none;
   }
 }
 @media screen and (min-width: 900px) {

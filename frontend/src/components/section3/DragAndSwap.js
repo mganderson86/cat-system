@@ -16,7 +16,7 @@ function firstUpperCase(s) {
 const openNotification = () => {
 	notification.open({
 		message: "You should drag and drop to reorder the sentences before going to the next question.",
-		duration: 2.5,
+		duration: 3,
 	});
 };
 

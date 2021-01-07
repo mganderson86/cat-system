@@ -1,4 +1,4 @@
-import { Divider, Typography } from "antd";
+import { Divider, Typography, Col, Row } from "antd";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { FourPictures, NextButton } from "../utils/Utils";
@@ -11,7 +11,8 @@ class Section5 extends Component {
 	constructor(props) {
 		super();
 		this.state = {
-			value: -1,
+			selectOption: -1,
+			borderStyle: ["none", "none", "none", "none"],
 			showElem: "none",
 		};
 	}
@@ -20,6 +21,13 @@ class Section5 extends Component {
 		this.setState({
 			showElem: "inline",
 		});
+	};
+
+	onClick = (e, val) => {
+		this.setState({ selectOption: val });
+		let newBorderStyle = ["none", "none", "none", "none"];
+		newBorderStyle[val - 1] = "solid";
+		this.setState({ borderStyle: newBorderStyle });
 	};
 
 	render() {
@@ -69,9 +77,51 @@ class Section5 extends Component {
 						</div>
 
 					</div>
-					<div>
+					{/* <div>
 						<FourPictures picture1={picture1} picture2={picture2} picture3={picture3} picture4={picture4} />
+					</div> */}
+				
+					<div>
+						<Row justify="space-around" gutter={[16, 24]}>
+							<Col span={10} offset={4}>
+								<img
+									src={picture1}
+									onClick={(e) => this.onClick(e, 1)}
+									style={{ borderStyle: this.state.borderStyle[0] }}
+									alt="img"
+								/>
+							</Col>
+
+							<Col span={10}>
+								<img
+									src={picture2}
+									onClick={(e) => this.onClick(e, 2)}
+									style={{ borderStyle: this.state.borderStyle[1] }}
+									alt="img"
+								/>
+							</Col>
+						</Row>
+						<Row justify="space-around" gutter={[16, 24]}>
+							<Col span={10} offset={4}>
+								<img
+									src={picture3}
+									onClick={(e) => this.onClick(e, 3)}
+									style={{ borderStyle: this.state.borderStyle[2] }}
+									alt="img"
+								/>
+							</Col>
+
+							<Col span={10}>
+								<img
+									src={picture4}
+									onClick={(e) => this.onClick(e, 4)}
+									style={{ borderStyle: this.state.borderStyle[3] }}
+									alt="img"
+								/>
+							</Col>
+						</Row>
 					</div>
+				
 				</div>
 				<NextButton link="/section5_1" />
 															 

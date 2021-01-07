@@ -10,7 +10,7 @@ const { Paragraph } = Typography;
 
 const openNotification = () => {
 	notification.open({
-		message: "You should choose an option to go next.",
+		message: "You should select an option to go next.",
 		duration: 2.5,
 	});
 };
@@ -143,6 +143,7 @@ class UnderstandingResponses extends Component {
 						<Col span={2} offset={0}>
 							<img src={img} height="80px" alt="img" />
 						</Col>
+						<Col  offset={1}>
 						<div>
 							<Paragraph strong>{people}</Paragraph>
 							<div
@@ -166,6 +167,7 @@ class UnderstandingResponses extends Component {
 								))}
 							</Radio.Group>
 						</div>
+						</Col>
 					</Row>
 				</div>
 

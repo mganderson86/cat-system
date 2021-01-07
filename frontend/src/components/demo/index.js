@@ -18,7 +18,7 @@ const { Title } = Typography;
    const [field, meta] = useField(props);
    return (
      <>
-       <label htmlFor={props.id || props.name}>{label}</label>
+       <label className="text-input" htmlFor={props.id || props.name}>{label}</label>
        <input className="text-input" {...field} {...props} />
        {meta.touched && meta.error ? (
          <div className="error">{meta.error}</div>
@@ -33,7 +33,7 @@ const { Title } = Typography;
    // return the correct bag of props for you
    const [field, meta] = useField({ ...props, type: 'checkbox' });
    return (
-     <div>
+     <div className="checkbox">
        <label className="checkbox">
          <input type="checkbox" {...field} {...props} />
          {children}
@@ -51,7 +51,7 @@ const { Title } = Typography;
     // return the correct bag of props for you
     const [field, meta] = useField({ ...props, type: 'radio' });
     return (
-      <div>
+      <div className="radio">
         <label className="radio">
           <input type="radio" {...field} {...props} />
           {children}
@@ -66,7 +66,7 @@ const { Title } = Typography;
  const MySelect = ({ label, ...props }) => {
    const [field, meta] = useField(props);
    return (
-     <div>
+     <div className="select">
        <label htmlFor={props.id || props.name}>{label}</label>
        <select {...field} {...props} />
        {meta.touched && meta.error ? (
@@ -188,7 +188,7 @@ const { Title } = Typography;
                 ['white', 'black', 'latino', 'asian', 'amerindian', 'pacific', 'other'],
                 'Invalid racial/ethnic selection')
             )
-            .min(1)
+            .min(1, 'Please select at least one racial/ethnic background.')
             .required('Please select at least one racial/ethnic background.'),
             EthnicityOther: Yup.string().when(['Ethnicity'], {
               is: (Ethnicty) => Ethnicty.includes ('other'),
@@ -200,6 +200,7 @@ const { Title } = Typography;
                   ['spanish', 'arabic', 'chinese', 'english', 'other'],
                   'Invalid language selection')
               )
+              .min(1, 'Please select at least one language.')
             .required('Please select at least one language.'),
             OtherLanguageHome: Yup.string().when(['PrimaryLanguage'], {
               is: (PrimaryLanguage) => PrimaryLanguage.includes ('other'),
@@ -211,6 +212,7 @@ const { Title } = Typography;
                     ['spanish', 'arabic', 'chinese', 'english', 'other'],
                     'Invalid language selection')
                 )
+                .min(1, 'Please select at least one language.')
             .required('Please select at least one language.'),
             OtherLanguagePeople: Yup.string().when(['languagesHome'], {
               is: (languagesHome) => languagesHome.includes ('other'),
@@ -292,32 +294,32 @@ const { Title } = Typography;
            <MyCheckbox 
             multiple={true} 
             value="white" 
-            name="Ethnicity">White</MyCheckbox>
+            name="Ethnicity"> White</MyCheckbox>
            <MyCheckbox multiple={true}
             value="black" 
-            name="Ethnicity">Black or African American
+            name="Ethnicity"> Black or African American
             </MyCheckbox>
             <MyCheckbox multiple={true} 
             value="latino" 
-            name="Ethnicity">Hispanic or Latino
+            name="Ethnicity"> Hispanic or Latino
             </MyCheckbox>
             <MyCheckbox multiple={true} 
             value="asian" 
-            name="Ethnicity">Asian
+            name="Ethnicity"> Asian
             </MyCheckbox>
             <MyCheckbox multiple={true} 
             value="amerindian" 
-            name="Ethnicity">American Indian or Alaska Native
+            name="Ethnicity"> American Indian or Alaska Native
             </MyCheckbox>
             <MyCheckbox multiple={true} 
             value="pacific" 
-            name="Ethnicity">Native Hawaiian or Other Pacific Islander
+            name="Ethnicity"> Native Hawaiian or Other Pacific Islander
             </MyCheckbox>
             <MyCheckbox multiple={true} 
             value="other" 
             name="Ethnicity"
             onClick={this.setShowEthnicity}
-            >Other            
+            > Other            
             </MyCheckbox>
            </div>
            <div id="EthnicityOther" style={{ display: this.state.showE ? "block" : "none" }}> 
@@ -332,23 +334,23 @@ const { Title } = Typography;
            <MyCheckbox 
             multiple={true} 
             value="spanish" 
-            name="PrimaryLanguage">Spanish</MyCheckbox>
+            name="PrimaryLanguage"> Spanish</MyCheckbox>
            <MyCheckbox multiple={true} 
             value="arabic" 
-            name="PrimaryLanguage">Arabic
+            name="PrimaryLanguage"> Arabic
             </MyCheckbox>
             <MyCheckbox multiple={true} 
             value="chinese" 
-            name="PrimaryLanguage">Chinese
+            name="PrimaryLanguage"> Chinese
             </MyCheckbox>
             <MyCheckbox multiple={true} 
             value="english" 
-            name="PrimaryLanguage">English
+            name="PrimaryLanguage"> English
             </MyCheckbox>
             <MyCheckbox multiple={true} 
             value="other" 
             name="PrimaryLanguage"
-            onClick={this.setShowPLanguage} >Other            
+            onClick={this.setShowPLanguage} > Other            
             </MyCheckbox>
            </div>
            <div style={{ display: this.state.showP ? "block" : "none" }}> 
@@ -363,23 +365,23 @@ const { Title } = Typography;
            <MyCheckbox 
             multiple={true} 
             value="spanish" 
-            name="languagesHome">Spanish</MyCheckbox>
+            name="languagesHome"> Spanish</MyCheckbox>
            <MyCheckbox multiple={true} 
             value="arabic" 
-            name="languagesHome">Arabic
+            name="languagesHome"> Arabic
             </MyCheckbox>
             <MyCheckbox multiple={true} 
             value="chinese" 
-            name="languagesHome">Chinese
+            name="languagesHome"> Chinese
             </MyCheckbox>
             <MyCheckbox multiple={true} 
             value="english" 
-            name="languagesHome">English
+            name="languagesHome"> English
             </MyCheckbox>
             <MyCheckbox multiple={true} 
             value="other" 
             name="languagesHome"
-            onClick={this.setShowHLanguage}>Other
+            onClick={this.setShowHLanguage}> Other
             </MyCheckbox>
            </div>
            <div style={{ display: this.state.showH ? "block" : "none" }}> 

@@ -13,6 +13,7 @@ const openNotification = () => {
 		duration: 2.5,
 	});
 };
+const wordBox = require("../../Site/Images/task4_6_wordbox.png");
 
 function firstUpperCase(s) {
 	return s.replace(/^\S/, (s) => s.toUpperCase());
@@ -123,16 +124,19 @@ class BreakingWords extends Component {
 						<Col span={5}>
 							<div
 								style={{
-									backgroundColor: "lightgreen",
-									width: "160px",
-									borderStyle: "dotted",
+									color: "black",
+									fontWeight: "bold",
+									backgroundImage: `url(${wordBox})`,
+									backgroundSize: "100% 100%",
+									padding: "5px",
+									paddingRight: "35px",
 									textAlign: "center",
 								}}
 							>
 								{keyword}{" "}
 							</div>
 						</Col>
-						<Col>
+						<Col offset={1}>
 							{questionText1} <input value={this.state.answerText} onChange={this.onChange} />{" "}
 							{questionText2}
 						</Col>
