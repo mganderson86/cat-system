@@ -155,7 +155,7 @@ const { Title } = Typography;
            languagesHome: [],
            OtherLanguagePeople: ''
           }}
-         validationSchema={Yup.object({
+         /*validationSchema={Yup.object({
            FirstName: Yup.string()
              .max(15, 'Must be 15 characters or less')
              .required('Please provide your First Name.'),
@@ -219,7 +219,7 @@ const { Title } = Typography;
               then: Yup.string().required('Please enter some more information.'),
             })
             .max(50, 'Should be 50 characters or less'), 
-         })}
+         })}*/
          onSubmit={(values, { setSubmitting }) => {
            setTimeout(() => {
              //alert(JSON.stringify(values, null, 2));

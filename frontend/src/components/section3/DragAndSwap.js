@@ -88,13 +88,13 @@ class DragAndSwap extends Component {
 			curAnsId.push(curTextOptions[idx].ansId);
 		}
 		let ans = "";
-		for (let idx in curAnsId) {
+		/*for (let idx in curAnsId) {
 			if (curAnsId[idx] > numOfOptions) {
 				openNotification();
 				return;
 			}
 			ans = ans + curAnsId[idx];
-		}
+		}*/
 
 		let recordAns = {
 			question: this.state.question,
