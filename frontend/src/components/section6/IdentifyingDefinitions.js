@@ -265,7 +265,7 @@ class IdentifyingDefinitions extends Component {
 									textAlign: "center",
 								}}
 			>
-								<Text strong>c </Text> was written for:
+								<Text strong>C </Text> was written for:
 							</div>
 						</Col>
 						<Col span={4}>
