@@ -91,6 +91,7 @@ class IdentifyingDefinitions extends Component {
 			optionA: -1,
 			optionB: -1,
 			optionC: -1,
+			radioColor: ["black", "black", "black"],
 		});
 
 		await FetchData("/sumCorrectIncorrect", "PUT", data)
