@@ -370,7 +370,7 @@ export const defaultState = {
 		picture2: require("../Site/Images/Connect_pic_whereas_B_2.jpg"),
 		audio: "../Site/audio/Connect_pic_whereas_B.mp3",
 	},
-	Connect_sent_conequently: {
+	Connect_sent_consequently: {
 		text1: "During the last battle, most soldiers in the red army were sick.",
 		text2: " Consequently,",
 		choice: [
@@ -379,7 +379,7 @@ export const defaultState = {
 			" the soldiers were weak and lost the battle.",
 		],
 		answer:  3,
-		audio: "../Site/audio/Connect_sent_conequently.mp3",
+		audio: "../Site/audio/Connect_sent_consequently.mp3",
 	},
 	Connect_sent_however: {
 		text1: "The day was sunny and warm,",
@@ -1003,7 +1003,7 @@ export const defaultState = {
 			answer:  2,
 			audio: "../Site/audio/epis_acc_appears.mp3",
 			description: "rock_from_space",
-			img: "epis_acc_appears.jpg",
+			img: "epis_acc_appears.png",
 	},
 		epis_acc_unquestion: {
 			text0: "The scientist thinks:",
@@ -1066,7 +1066,7 @@ export const defaultState = {
 			answer:  3,
 			audio: "../Site/audio/epis_possiblebutunlikely.mp3",
 			description: "rock_from_space",
-			img: "epis_possiblebutunlikely.jpg",
+			img: "epis_possiblebutunlikely.png",
 	},
 		epis_presumably: {
 			text0: "The scientist thinks:",
@@ -1084,7 +1084,7 @@ export const defaultState = {
 			answer:  2,
 			audio: "../Site/audio/epis_probably.mp3",
 			description: "rock_from_space",
-			img: "epis_probably.jpg",
+			img: "epis_probably.png",
 	},
 		epis_suggest: {
 			text0: "The scientist thinks:",
@@ -1093,7 +1093,7 @@ export const defaultState = {
 			answer:  2,
 			audio: "../Site/audio/epis_suggest.mp3",
 			description: "rock_from_space",
-			img: "epis_suggest.jpg",
+			img: "epis_suggest.png",
 	},
 		epis_unlikely: {
 			text0: "The scientist thinks:",
@@ -1102,7 +1102,7 @@ export const defaultState = {
 			answer:  3,
 			audio: "../Site/audio/epis_unlikely.mp3",
 			description: "rock_from_space",
-			img: "epis_unlikely.jpg",
+			img: "epis_unlikely.png",
 	},
 		epis_acc_certainlynot: {
 			text0: "The scientist thinks:",
@@ -1120,7 +1120,7 @@ export const defaultState = {
 			answer:  3,
 			audio: "../Site/audio/epis_acc_unlikelybut.mp3",
 			description: "rock_from_space",
-			img: "epis_acc_unlikelybut.jpg",
+			img: "epis_acc_unlikelybut.png",
 	},
 		epis_soc_apparently: {
 			text0: "Jessie's friend thinks:",
@@ -1138,7 +1138,7 @@ export const defaultState = {
 			answer:  1,
 			audio: "../Site/audio/epis_soc_certainly.mp3",
 			description: "is_Jessie_coming",
-			img: "epis_soc_certainly.jpg",
+			img: "epis_soc_certainly.png",
 	},
 		epis_soc_impossible: {
 			text0: "Jessie's friend thinks:",
@@ -1147,7 +1147,7 @@ export const defaultState = {
 			answer:  4,
 			audio: "../Site/audio/epis_soc_impossible.mp3",
 			description: "is_Jessie_coming",
-			img: "epis_soc_impossible.jpg",
+			img: "epis_soc_impossible.png",
 	},
 		epis_soc_possible: {
 			text0: "Jessie's friend thinks:",
@@ -1156,7 +1156,7 @@ export const defaultState = {
 			answer:  3,
 			audio: "../Site/audio/epis_soc_possible.mp3",
 			description: "is_Jessie_coming",
-			img: "epis_soc_possible.jpg",
+			img: "epis_soc_possible.png",
 	},
 		epis_soc_probably: {
 			text0: "Jessie's friend thinks:",
@@ -1165,7 +1165,7 @@ export const defaultState = {
 			answer:  2,
 			audio: "../Site/audio/epis_soc_probably.mp3",
 			description: "is_Jessie_coming",
-			img: "epis_soc_probably.jpg",
+			img: "epis_soc_probably.png",
 	},
 		epis_soc_seems: {
 			text0: "Jessie's friend thinks:",
@@ -1404,7 +1404,7 @@ export const defaultState = {
 			idea: "I don't think so. Students do not need recess because they can have fun after school.",
 			ask: "Jamie is ...",
 			type: "bubble",
-			img: "meta_contadictingA.png",
+			img: "meta_contradictingA.png",
 			options: [
 				"emphasizing the newspaper's idea",
 				"supporting the newspaper's idea",
