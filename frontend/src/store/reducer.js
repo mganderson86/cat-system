@@ -203,22 +203,6 @@ export const defaultState = {
 			lessAnswer: [" "],
 			audio: "../Site/audio/Anagram_swimming.mp3",
 	},
-
-	Anagram_gender_A: {
-			title: "Separate classrooms for boys and girls?",
-			numOfText: 6,
-			text1: "In conclusion, having separate classes for boys and girls improves their learning.",
-			text2: "Lastly, boys and girls participate more in class discussions when they are separated.",
-			text3: "Another reason is that boys and girls pay less attention to clothes and looks when they are in separate classes.",
-			text4: "For instance, a 4th-grade girl said that she speaks up much more in class in her all-girls school.",
-			text5: "One reason is that boys and girls in separate classes feel safer and study more.",
-			text6: "In my opinion, boys and girls should be in separate classrooms for several reasons.",
-			fullAnswer: ["654321", "653421"],
-			partAnswer: ["564321", "563421"],
-			lessAnswer: ["600001"],
-			audio: "../Site/audio/Anagram_gender_A.mp3",
-		},
-
 	},
 	Connect_pic_asaconsequence: {
 		text: "During the class trip, the bus broke down. __________, students were not able to go to the museum.",
@@ -226,8 +210,8 @@ export const defaultState = {
 		text2: ", students were not able to go to the museum.",
 		choice: [" As a consequence", " Likewise", " However", " Otherwise"],
 		answer:  1,
-		picture1: require("../Site/Images/Connect_pic_asaconsequence_1.jpg"),
-		picture2: require("../Site/Images/Connect_pic_asaconsequence_2.jpg"),
+		picture1: require("../Site/Images/Connect_pic_asaconsequence_1.png"),
+		picture2: require("../Site/Images/Connect_pic_asaconsequence_2.png"),
 		audio: "../Site/audio/Connect_pic_asaconsequence.mp3",
 	},
 	Connect_pic_consequently: {
@@ -236,8 +220,8 @@ export const defaultState = {
 		text2: " he got a good grade.",
 		choice: [" In contrast", " Even though", " Consequently", " Nonetheless"],
 		answer:  3,
-		picture1: require("../Site/Images/Connect_pic_consequently_1.jpg"),
-		picture2: require("../Site/Images/Connect_pic_consequently_2.jpg"),
+		picture1: require("../Site/Images/Connect_pic_consequently_1.png"),
+		picture2: require("../Site/Images/Connect_pic_consequently_2.png"),
 		audio: "../Site/audio/Connect_pic_consequently.mp3",
 	},
 	Connect_pic_incontrast_B: {
@@ -246,8 +230,8 @@ export const defaultState = {
 		text2: ", Julie enjoys math class the most.",
 		choice: [" As a result", " In contrast", " Hence", " Therefore"],
 		answer:  2,
-		picture1: require("../Site/Images/Connect_pic_incontrast_B_A.png"),
-		picture2: require("../Site/Images/Connect_pic_incontrast_B_B.png"),
+		picture1: require("../Site/Images/Connect_pic_incontrast_B_1.png"),
+		picture2: require("../Site/Images/Connect_pic_incontrast_B_2.png"),
 		audio: "../Site/audio/Connect_pic_incontrast_B.mp3",
 	},
 	Connect_pic_inotherwords: {
@@ -256,8 +240,8 @@ export const defaultState = {
 		text2: " all plastic and glass bottles will go in special bins.",
 		choice: [" Nevertheless", " In spite of that", " In other words", " Even though"],
 		answer:  3,
-		picture1: require("../Site/Images/Connect_pic_inotherwords_1.jpg"),
-		picture2: require("../Site/Images/Connect_pic_inotherwords_2.jpg"),
+		picture1: require("../Site/Images/Connect_pic_inotherwords_1.png"),
+		picture2: require("../Site/Images/Connect_pic_inotherwords_2.png"),
 		audio: "../Site/audio/Connect_pic_inotherwords.mp3",
 	},
 	Connect_pic_onthecontrary: {
@@ -266,8 +250,8 @@ export const defaultState = {
 		text2: ", blue whales are the largest animals.",
 		choice: [" Therefore", " Furthermore", " On the contrary", " Hence"],
 		answer:  3,
-		picture1: require("../Site/Images/Connect_pic_onthecontrary_1.jpg"),
-		picture2: require("../Site/Images/Connect_pic_onthecontrary_2.jpg"),
+		picture1: require("../Site/Images/Connect_pic_onthecontrary_1.png"),
+		picture2: require("../Site/Images/Connect_pic_onthecontrary_2.png"),
 		audio: "../Site/audio/Connect_pic_onthecontrary.mp3",
 	},
 	Connect_pic_similarly: {
@@ -276,8 +260,8 @@ export const defaultState = {
 		text2: ", roses also come in many different colors.",
 		choice: [" Because", " But", " However", " Similarly"],
 		answer:  4,
-		picture1: require("../Site/Images/Connect_pic_similarly_1.jpg"),
-		picture2: require("../Site/Images/Connect_pic_similarly_2.jpg"),
+		picture1: require("../Site/Images/Connect_pic_similarly_1.png"),
+		picture2: require("../Site/Images/Connect_pic_similarly_2.png"),
 		audio: "../Site/audio/Connect_pic_similarly.mp3",
 	},
 	Connect_pic_therefore_A: {
@@ -286,8 +270,8 @@ export const defaultState = {
 		text2: " Nick and his father are excited.",
 		choice: [" on the other hand", " yet", " however", " therefore"],
 		answer:  4,
-		picture1: require("../Site/Images/Connect_pic_therefore_A_1.jpg"),
-		picture2: require("../Site/Images/Connect_pic_therefore_A_2.jpg"),
+		picture1: require("../Site/Images/Connect_pic_therefore_A_1.png"),
+		picture2: require("../Site/Images/Connect_pic_therefore_A_2.png"),
 		audio: "../Site/audio/Connect_pic_therefore_A.mp3",
 	},
 	Connect_pic_whereas_A: {
@@ -296,8 +280,8 @@ export const defaultState = {
 		text2: " David does not.",
 		choice: [" likewise", " whether", " whereas", " moreover"],
 		answer:  3,
-		picture1: require("../Site/Images/Connect_pic_whereas_A_1.jpg"),
-		picture2: require("../Site/Images/Connect_pic_whereas_A_2.jpg"),
+		picture1: require("../Site/Images/Connect_pic_whereas_A_1.png"),
+		picture2: require("../Site/Images/Connect_pic_whereas_A_2.png"),
 		audio: "../Site/audio/Connect_pic_whereas_A.mp3",
 	},
 	Connect_pic_asaresult: {
@@ -306,8 +290,8 @@ export const defaultState = {
 		text2: " she stayed home and did not go to school.",
 		choice: [" Otherwise", " Yet", " In contrast", " As a result"],
 		answer:  4,
-		picture1: require("../Site/Images/Connect_pic_asaresult_1.jpg"),
-		picture2: require("../Site/Images/Connect_pic_asaresult_2.jpg"),
+		picture1: require("../Site/Images/Connect_pic_asaresult_1.png"),
+		picture2: require("../Site/Images/Connect_pic_asaresult_2.png"),
 		audio: "../Site/audio/Connect_pic_asaresult.mp3",
 	},
 	Connect_pic_forinstance: {
@@ -316,8 +300,8 @@ export const defaultState = {
 		text2: "students at my school can be part of our soccer team.",
 		choice: [" On the other hand", " In conclusion", " For instance", " In spite of that"],
 		answer:  3,
-		picture1: require("../Site/Images/Connect_pic_forinstance_1.jpg"),
-		picture2: require("../Site/Images/Connect_pic_forinstance_2.jpg"),
+		picture1: require("../Site/Images/Connect_pic_forinstance_1.png"),
+		picture2: require("../Site/Images/Connect_pic_forinstance_2.png"),
 		audio: "../Site/audio/Connect_pic_forinstance.mp3",
 	},
 	Connect_pic_inconclusion: {
@@ -326,8 +310,8 @@ export const defaultState = {
 		text2: ", she is the best player on the team.",
 		choice: [" On the other hand", " Otherwise", " In conclusion", " In contrast"],
 		answer:  3,
-		picture1: require("../Site/Images/Connect_pic_inconclusion_1.jpg"),
-		picture2: require("../Site/Images/Connect_pic_inconclusion_2.jpg"),
+		picture1: require("../Site/Images/Connect_pic_inconclusion_1.png"),
+		picture2: require("../Site/Images/Connect_pic_inconclusion_2.png"),
 		audio: "../Site/audio/Connect_pic_inconclusion.mp3",
 	},
 	Connect_pic_incontrast: {
@@ -336,8 +320,8 @@ export const defaultState = {
 		text2: ", Carolina thinks cats are the best pets.",
 		choice: [" In contrast", " For example", " Otherwise", " In other words"],
 		answer:  1,
-		picture1: require("../Site/Images/Connect_pic_incontrast_1.jpg"),
-		picture2: require("../Site/Images/Connect_pic_incontrast_2.jpg"),
+		picture1: require("../Site/Images/Connect_pic_incontrast_1.png"),
+		picture2: require("../Site/Images/Connect_pic_incontrast_2.png"),
 		audio: "../Site/audio/Connect_pic_incontrast.mp3",
 	},
 	Connect_pic_nevertheless: {
@@ -346,8 +330,8 @@ export const defaultState = {
 		text2: " he continues to play baseball.",
 		choice: [" consequently", " nevertheless", " namely", " thus"],
 		answer:  2,
-		picture1: require("../Site/Images/Connect_pic_nevertheless_1.jpg"),
-		picture2: require("../Site/Images/Connect_pic_nevertheless_2.jpg"),
+		picture1: require("../Site/Images/Connect_pic_nevertheless_1.png"),
+		picture2: require("../Site/Images/Connect_pic_nevertheless_2.png"),
 		audio: "../Site/audio/Connect_pic_nevertheless.mp3",
 	},
 	Connect_pic_therefore_B: {
@@ -356,8 +340,8 @@ export const defaultState = {
 		text2: " our school got a prize.",
 		choice: [" on the other hand", " yet", " however", " therefore"],
 		answer:  4,
-		picture1: require("../Site/Images/Connect_pic_therefore_B_1.jpg"),
-		picture2: require("../Site/Images/Connect_pic_therefore_B_2.jpg"),
+		picture1: require("../Site/Images/Connect_pic_therefore_B_1.png"),
+		picture2: require("../Site/Images/Connect_pic_therefore_B_2.png"),
 		audio: "../Site/audio/Connect_pic_therefore_B.mp3",
 	},
 	Connect_pic_whereas_B: {
@@ -366,8 +350,8 @@ export const defaultState = {
 		text2: " a centipede has 100 legs.",
 		choice: [" likewise", " whether", " whereas", " moreover"],
 		answer:  3,
-		picture1: require("../Site/Images/Connect_pic_whereas_B_1.jpg"),
-		picture2: require("../Site/Images/Connect_pic_whereas_B_2.jpg"),
+		picture1: require("../Site/Images/Connect_pic_whereas_B_1.png"),
+		picture2: require("../Site/Images/Connect_pic_whereas_B_2.png"),
 		audio: "../Site/audio/Connect_pic_whereas_B.mp3",
 	},
 	Connect_sent_consequently: {
@@ -725,7 +709,7 @@ export const defaultState = {
 		text1: "She raised her hand to give her",
 		text2: ".",
 		keyword: "responsive",
-		answer: ["response", "respons", "response"],
+		answer: ["response", "respons", "responce"],
 			audio: "../Site/audio/Morpho_responsive.mp3",
 	},
 	Morpho_scandalous: {
@@ -1012,7 +996,7 @@ export const defaultState = {
 			answer:  1,
 			audio: "../Site/audio/epis_acc_unquestion.mp3",
 			description: "rock_from_space",
-			img: "epis_acc_unquestion.jpg",
+			img: "epis_acc_unquestion.png",
 	},
 		epis_certainly: {
 			text0: "The scientist thinks:",
@@ -1021,7 +1005,7 @@ export const defaultState = {
 			answer:  1,
 			audio: "../Site/audio/epis_certainly.mp3",
 			description: "rock_from_space",
-			img: "epis_certainly.jpg",
+			img: "epis_certainly.png",
 	},
 		epis_conclusively: {
 			text0: "The scientist thinks:",
@@ -1030,7 +1014,7 @@ export const defaultState = {
 			answer:  1,
 			audio: "../Site/audio/epis_conclusively.mp3",
 			description: "rock_from_space",
-			img: "epis_conclusively.jpg",
+			img: "epis_conclusively.png",
 	},
 		epis_impossible: {
 			text0: "The scientist thinks:",
@@ -1039,7 +1023,7 @@ export const defaultState = {
 			answer:  4,
 			audio: "../Site/audio/epis_impossible.mp3",
 			description: "rock_from_space",
-			img: "epis_impossible.jpg",
+			img: "epis_impossible.png",
 	},
 		epis_obvious: {
 			text0: "The scientist thinks:",
@@ -1048,7 +1032,7 @@ export const defaultState = {
 			answer:  1,
 			audio: "../Site/audio/epis_obvious.mp3",
 			description: "rock_from_space",
-			img: "epis_obvious.jpg",
+			img: "epis_obvious.png",
 	},
 		epis_possible: {
 			text0: "The scientist thinks:",
@@ -1057,7 +1041,7 @@ export const defaultState = {
 			answer:  2,
 			audio: "../Site/audio/epis_possible.mp3",
 			description: "rock_from_space",
-			img: "epis_possible.jpg",
+			img: "epis_possible.png",
 	},
 		epis_possiblebutunlikely: {
 			text0: "The scientist thinks:",
@@ -1075,7 +1059,7 @@ export const defaultState = {
 			answer:  2,
 			audio: "../Site/audio/epis_presumably.mp3",
 			description: "rock_from_space",
-			img: "epis_presumably.jpg",
+			img: "epis_presumably.png",
 	},
 		epis_probably: {
 			text0: "The scientist thinks:",
@@ -1111,7 +1095,7 @@ export const defaultState = {
 			answer:  4,
 			audio: "../Site/audio/epis_acc_certainlynot.mp3",
 			description: "rock_from_space",
-			img: "epis_acc_certainlynot.jpg",
+			img: "epis_acc_certainlynot.png",
 	},
 		epis_acc_unlikelybut: {
 			text0: "The scientist thinks:",
@@ -1129,7 +1113,7 @@ export const defaultState = {
 			answer:  2,
 			audio: "../Site/audio/epis_soc_apparently.mp3",
 			description: "is_Jessie_coming",
-			img: "epis_soc_apparently.jpg",
+			img: "epis_soc_apparently.png",
 	},
 		epis_soc_certainly: {
 			text0: "Jessie's friend thinks:",
@@ -1174,7 +1158,7 @@ export const defaultState = {
 			answer:  2,
 			audio: "../Site/audio/epis_soc_seems.mp3",
 			description: "is_Jessie_coming",
-			img: "epis_soc_seems.jpg",
+			img: "epis_soc_seems.png",
 	},
 		epis_soc_unlikely: {
 			text0: "Jessie's friend thinks:",
@@ -1183,47 +1167,8 @@ export const defaultState = {
 			answer:  3,
 			audio: "../Site/audio/epis_soc_unlikely.mp3",
 			description: "is_Jessie_coming",
-			img: "epis_soc_unlikely.jpg",
+			img: "epis_soc_unlikely.png",
 	},
-
-
-		
-		epis_acc_conclusively: {
-			text0: "The scientist thinks:",
-			text1: "Conclusively, the rock is from space.",
-			text2: "For the scientist, is the rock from space?",
-			answer: 1,
-			audio: "../Site/audio/epis_acc_conclusively.mp3",
-			description: "rock_from_space",
-			img: "epis_acc_conclusively.jpg",
-		},
-		epis_unquestion: {
-			text0: "The scientist thinks:",
-			text1: "It is unquestionable that the rock is from space.",
-			text2: "For the scientist, is the rock from space?",
-			answer: 1,
-			audio: "../Site/audio/epis_unquestion.mp3",
-			description: "rock_from_space",
-			img: "epis_unquestion.jpg",
-		},
-		epis_acc_suggest: {
-			text0: "The scientist thinks:",
-			text1: "Results suggest that the rock is from space.",
-			text2: "For the scientist, is the rock from space?",
-			answer: 2,
-			audio: "../Site/audio/epis_acc_suggest.mp3",
-			description: "rock_from_space",
-			img: "epis_acc_suggest.png",
-		},
-		epis_acc_presumably: {
-			text0: "The scientist thinks:",
-			text1: "Presumably, the rock is from space. ",
-			text2: "For the scientist, is the rock from space?",
-			answer: 2,
-			audio: "../Site/audio/epis_acc_presumably.mp3",
-			description: "rock_from_space",
-			img: "epis_acc_presumably.jpg",
-		},
 	},
 	// Section 8
 	METALINGUISTIC: {
@@ -1412,7 +1357,7 @@ export const defaultState = {
 				"misrepresenting the newspaper's idea",
 			],
 			answer:  3,
-			audio: "../Site/audio/meta_contadictingA.mp3",
+			audio: "../Site/audio/meta_contradictingA.mp3",
 	},
 		meta_contradictory: {
 			newspaper: "Newspaper:",
