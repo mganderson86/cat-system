@@ -1,15 +1,23 @@
-import { Button, Col, Divider, Radio, Row, Typography } from "antd";
+import { Button, Col, Divider, Radio, Row, Typography, notification } from "antd";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Pic from "../../play.png";
 import ReactAudioPlayer from "react-audio-player";
+import { NextQuestionButton } from "../utils/Utils";
 
 const { Title, Text } = Typography; //removed Paragraph, not used
 
+const openNotification = () => {
+	notification.open({
+		message: "You should select an option to go next.",
+		duration: 2.5,
+	});
+};
+
 class Section7 extends Component {
 	constructor(props) {
-		super();
+		super(props);
 		this.state = {
 			value: -1,
 			sampleItem: 1,
@@ -27,6 +35,15 @@ class Section7 extends Component {
 		this.setState({
 			showElem: "inline",
 		});
+	};
+
+	onClickNext = (e) => {
+		e.preventDefault();
+		if (this.state.value === -1) {
+			openNotification();
+			return;
+		}
+		this.props.history.push("/section7_1");
 	};
 
 	render() {
@@ -74,7 +91,7 @@ class Section7 extends Component {
 								controls
 							></ReactAudioPlayer>
 						</span>
-						<Divider />
+						<Divider style={{ margin: "10px" }} />
 					</div>
 
 					<div className="green-text">
@@ -154,23 +171,25 @@ class Section7 extends Component {
 					</div>
 				</div>
 
-				<div style={{ position: "absolute", bottom: "120px", right: "80px" }}>
 					{this.state.sampleItem === 1 ? (
+						<div style={{ position: "absolute", bottom: "50px", right: "80px" }}>
 						<Button
 							danger
 							style={{ color: "green", borderColor: "green" }}
 							onClick={() => {
-								this.setState({ sampleItem: 2 });
+								if (this.state.value === -1) {
+									openNotification();
+									return;
+								}
+								this.setState({ sampleItem: 2, value: -1 });
 							}}
 						>
 							Next
 						</Button>
+						</div>
 					) : (
-						<Button danger style={{ color: "green", borderColor: "green" }}>
-							<Link to="/section7_1">Next</Link>
-						</Button>
+						<NextQuestionButton getNextQuestion={this.onClickNext} />
 					)}
-				</div>
 			</div>
 		);
 	}
@@ -179,17 +198,8 @@ class Section7 extends Component {
 const mapStateToProps = (state) => {
 	console.log(state);
 	return {
-		sessionNum: state.sessionNum,
 		fontSize: state.fontSize,
 	};
 };
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-	return {
-		dispatch1: () => {
-			dispatch();
-		},
-	};
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Section7);
+export default connect(mapStateToProps)(Section7);
