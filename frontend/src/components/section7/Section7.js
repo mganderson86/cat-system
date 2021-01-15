@@ -1,7 +1,7 @@
 import { Button, Col, Divider, Radio, Row, Typography, notification } from "antd";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import Pic from "../../play.png";
 import ReactAudioPlayer from "react-audio-player";
 import { NextQuestionButton } from "../utils/Utils";

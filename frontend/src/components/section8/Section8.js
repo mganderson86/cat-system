@@ -2,10 +2,8 @@ import { Button, Col, Divider, Radio, Row, Typography } from "antd";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-/* these hooks are not used in this page
 import Pic from "../../play.png";
 import ReactAudioPlayer from "react-audio-player";
-*/
 
 const { Title, Text, Paragraph } = Typography;
 
@@ -34,7 +32,7 @@ class Section8 extends Component {
 	render() {
 		const img1 = require("../../Site/section8_images/meta_example.png");
 		const bubble = require("../../Site/section8_images/meta_speechbubble.png");
-		//const audio = "../../Site/audio/Task_8_Understanding_Responses_Directions.mp3"; //assigned but not used
+		const audio = "../../Site/audio/Task_8_Understanding_Responses_Directions.mp3";
 
 		const radioStyle = {
 			display: "block",
@@ -50,21 +48,21 @@ class Section8 extends Component {
 						SECTION 8: UNDERSTANDING RESPONSES
 					</Title>
 					<Divider style={{ margin: "10px" }} />
-					{/* <div style={{ marginBottom: "5px", height: "50px" }}>
+					<div style={{ marginBottom: "5px", height: "50px" }}>
 						<img onClick={this.playAudio} src={Pic} height="54px" width="54px" alt="img" />
 						<ReactAudioPlayer
 							style={{ display: this.state.showElem, verticalAlign: "middle" }}
 							src={audio}
 							controls
 						></ReactAudioPlayer>
-					</div> */}
+					</div>
 
 					{this.state.sampleItem === 1 ? (
 						<div className="green-text">
 							<Text style={{ color: "black" }}>
 								In this section, you will read students’ reactions to an idea from a newspaper article.
 								Different students have different reactions to the newspaper’s idea. For example some
-								agree, others disagree or question this idea. Your job to describe what students are
+								agree, others disagree or question this idea. Your job is to describe what students are
 								saying or writing.
 							</Text>
 						</div>

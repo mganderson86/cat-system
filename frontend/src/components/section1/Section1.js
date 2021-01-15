@@ -2,14 +2,15 @@ import { Col, Divider, Radio, Row, Typography } from "antd"; //Button is not use
 import React, { Component } from "react";
 import { connect } from "react-redux";
 /* import { Link } from "react-router-dom"; // not used in this page */
-import { TwoPictures } from "../utils/Utils";
-import { NextButton } from "../utils/Utils";
+import Pic from "../../play.png";
+import ReactAudioPlayer from "react-audio-player";
+import { TwoPictures, NextButton } from "../utils/Utils";
 
 const { Title, Text } = Typography;
 
 class Section1 extends Component {
 	constructor(props) {
-		super();
+		super(props);
 
 		this.state = {
 			value: -1,
@@ -18,6 +19,12 @@ class Section1 extends Component {
 			showElem: "none",
 		};
 	}
+
+	playAudio = () => {
+		this.setState({
+			showElem: "inline",
+		});
+	};
 
 	onChange = (e) => {
 		let choice = ["but", "then", "so", "also"];
@@ -37,7 +44,7 @@ class Section1 extends Component {
 		const questionText2 = " Jim wears sandals.";
 		const picture1 = require("../../Site/Images/ConnectingIdeaExamplePic1.jpg");
 		const picture2 = require("../../Site/Images/ConnectingIdeaExamplePic2.jpg");
-		//const audio = "../../Site/audio/Task_1_Connecting_Ideas_Directions.mp3"; //not called
+		const audio = "../../Site/audio/Task_1_Connecting_Ideas_Directions.mp3";
 
 		return (
 			<div className="main-context-div" style={{ fontSize: this.props.fontSize }}>
@@ -45,6 +52,14 @@ class Section1 extends Component {
 					<Title level={3} align="left">
 						SECTION 1: CONNECTING IDEAS
 					</Title>
+					<span style={{ marginBottom: "5px", height: "50px" }}>
+							<img onClick={this.playAudio} src={Pic} height="54px" width="54px" alt="img" />
+							<ReactAudioPlayer
+								style={{ display: this.state.showElem, verticalAlign: "middle" }}
+								src={audio}
+								controls
+							></ReactAudioPlayer>
+						</span>
 					<Divider style={{ margin: "10px" }} />
 					<div>
 						<ul>

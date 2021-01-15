@@ -87,7 +87,7 @@ class UnderstandingResponses extends Component {
 				console.log(res);
 				if (res.nextQuestion === "") {
 					this.props.clearNumQuestions();
-					this.props.history.push("/ending");
+					this.props.history.push("https://harvard.az1.qualtrics.com/jfe/form/SV_cJf4aIXbeVdcgTj");
 				} else {
 					this.setState({ question: res.nextQuestion });
 				}
@@ -104,9 +104,11 @@ class UnderstandingResponses extends Component {
 			this.props.curState.METALINGUISTIC[this.state.question].img);
 		const options = this.props.curState.METALINGUISTIC[this.state.question].options;
 		const audio = this.props.curState.METALINGUISTIC[this.state.question].audio;
+		const type = this.props.curState.METALINGUISTIC[this.state.question].type;
 
 		const bubble = require("../../Site/section8_images/meta_speechbubble.png");
 		const paper = require("../../Site/section8_images/meta_newspaper.png");
+		const pencil = require("../../Site/section8_images/meta_pencil.png");
 
 		const radioStyle = {
 			display: "block",
@@ -114,6 +116,26 @@ class UnderstandingResponses extends Component {
 			lineHeight: "30px",
 			color: "black",
 		};
+		
+		function questionStyle() {
+			if ({type} === "bubble") {
+				return {
+					color: "black",
+					backgroundImage: `url(${bubble})`,
+					backgroundSize: "100% 100%",
+					padding: "20px",
+					paddingLeft: "100px"
+				}
+			}
+			else {
+				return {
+					color: "black",
+					backgroundImage: `url(${pencil})`,
+					padding: "20px",
+					paddingLeft: "100px"
+				}
+			}
+		}
 
 		return (
 			<div className="main-context-div " style={{ fontSize: this.props.fontSize }}>
@@ -128,12 +150,7 @@ class UnderstandingResponses extends Component {
 					</div>
 					<Row>
 						<div
-							style={{
-								color: "black",
-								backgroundImage: `url(${paper})`,
-								backgroundSize: "100% 100%",
-								padding: "40px",
-							}}
+							
 						>
 							<Paragraph strong>{newspaper}</Paragraph>
 							<Paragraph>{news}</Paragraph>
@@ -147,13 +164,7 @@ class UnderstandingResponses extends Component {
 						<div>
 							<Paragraph strong>{people}</Paragraph>
 							<div
-								style={{
-									color: "black",
-									backgroundImage: `url(${bubble})`,
-									backgroundSize: "100% 100%",
-									padding: "20px",
-									paddingLeft: "100px",
-								}}
+								style={questionStyle}
 							>
 								{idea}
 							</div>
