@@ -78,6 +78,7 @@ class PageSwitch extends React.Component {
 				<Route path="/section8" component={Section8}></Route>
 				<Route path="/section8_1" component={UnderstandingResponses}></Route>
 				<Route path="/ending" component={ThankYouPage}></Route>
+				<Route path='/questionnaire' component={() => { window.location.href = 'https://harvard.az1.qualtrics.com/jfe/form/SV_cJf4aIXbeVdcgTj'; return null; }} />
 			</Switch>
 		);
 	}

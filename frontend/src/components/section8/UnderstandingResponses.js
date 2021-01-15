@@ -87,7 +87,7 @@ class UnderstandingResponses extends Component {
 				console.log(res);
 				if (res.nextQuestion === "") {
 					this.props.clearNumQuestions();
-					this.props.history.push("https://harvard.az1.qualtrics.com/jfe/form/SV_cJf4aIXbeVdcgTj");
+					this.props.history.push("/questionnaire");
 				} else {
 					this.setState({ question: res.nextQuestion });
 				}
@@ -104,7 +104,7 @@ class UnderstandingResponses extends Component {
 			this.props.curState.METALINGUISTIC[this.state.question].img);
 		const options = this.props.curState.METALINGUISTIC[this.state.question].options;
 		const audio = this.props.curState.METALINGUISTIC[this.state.question].audio;
-		const type = this.props.curState.METALINGUISTIC[this.state.question].type;
+		const qType = this.props.curState.METALINGUISTIC[this.state.question].type;
 
 		const bubble = require("../../Site/section8_images/meta_speechbubble.png");
 		const paper = require("../../Site/section8_images/meta_newspaper.png");
@@ -117,8 +117,10 @@ class UnderstandingResponses extends Component {
 			color: "black",
 		};
 		
+				
 		function questionStyle() {
-			if ({type} === "bubble") {
+			
+			if (qType === "bubble") {
 				return {
 					color: "black",
 					backgroundImage: `url(${bubble})`,
@@ -131,6 +133,7 @@ class UnderstandingResponses extends Component {
 				return {
 					color: "black",
 					backgroundImage: `url(${pencil})`,
+					backgroundRepeat: "no-repeat",
 					padding: "20px",
 					paddingLeft: "100px"
 				}
@@ -150,7 +153,12 @@ class UnderstandingResponses extends Component {
 					</div>
 					<Row>
 						<div
-							
+							style={{
+								color: "black",
+								backgroundImage: `url(${paper})`,
+								backgroundSize: "100% 100%",
+								padding: "40px",
+							}}
 						>
 							<Paragraph strong>{newspaper}</Paragraph>
 							<Paragraph>{news}</Paragraph>
@@ -164,7 +172,7 @@ class UnderstandingResponses extends Component {
 						<div>
 							<Paragraph strong>{people}</Paragraph>
 							<div
-								style={questionStyle}
+								style={questionStyle()}
 							>
 								{idea}
 							</div>
