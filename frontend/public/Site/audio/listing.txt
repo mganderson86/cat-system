@@ -1,0 +1,37 @@
+ Volume in drive C is Primary
+ Volume Serial Number is 1C70-21D0
+
+ Directory of C:\my_files\GRANTS\PAOLA\goal5\developmentpresentationanalysis\Final_Audio\Section_1_Items_Revised_Jan_2021
+
+01/13/2021  10:00 AM    <DIR>          .
+01/13/2021  10:00 AM    <DIR>          ..
+01/12/2021  02:32 PM               200 audiorename.bat
+01/12/2021  04:03 PM             7,729 audiorename2.bat
+01/10/2021  12:47 PM           121,044 Connect_pic_asaconsequence.mp3
+01/10/2021  03:05 PM           108,505 Connect_pic_asaresult.mp3
+01/10/2021  12:50 PM           104,273 Connect_pic_consequently.mp3
+01/10/2021  03:26 PM           129,194 Connect_pic_forinstance.mp3
+01/10/2021  03:43 PM           134,680 Connect_pic_inconclusion.mp3
+01/10/2021  03:50 PM           120,104 Connect_pic_incontrast.mp3
+01/10/2021  01:00 PM           110,073 Connect_pic_incontrast_B.mp3
+01/10/2021  01:17 PM           124,179 Connect_pic_inotherwords.mp3
+01/10/2021  03:56 PM           107,251 Connect_pic_nevertheless.mp3
+01/10/2021  01:32 PM           122,925 Connect_pic_onthecontrary.mp3
+01/10/2021  01:37 PM           108,505 Connect_pic_similarly.mp3
+01/10/2021  01:44 PM           110,229 Connect_pic_therefore_A.mp3
+01/11/2021  11:06 AM           108,819 Connect_pic_therefore_B.mp3
+01/10/2021  01:50 PM            95,339 Connect_pic_whereas_A.mp3
+01/11/2021  11:11 AM           102,393 Connect_pic_whereas_B.mp3
+01/11/2021  11:43 AM           107,408 Connect_sent_accordingly.mp3
+01/11/2021  11:14 AM           114,931 Connect_sent_consequently.mp3
+01/11/2021  11:20 AM            91,108 Connect_sent_however.mp3
+01/11/2021  11:40 AM            98,631 Connect_sent_however_B.mp3
+10/07/2020  01:24 PM            92,361 Connect_sent_incontrast.mp3
+01/11/2021  11:25 AM            97,377 Connect_sent_moreover.mp3
+01/11/2021  11:28 AM           105,841 Connect_sent_nonetheless.mp3
+01/11/2021  11:35 AM           108,348 Connect_sent_nonetheless_B.mp3
+01/11/2021  11:31 AM           120,887 Connect_sent_otherhand.mp3
+01/13/2021  10:00 AM                 0 listing.txt
+01/13/2021  09:54 AM    <DIR>          notused
+              27 File(s)      2,652,334 bytes
+               3 Dir(s)  833,728,155,648 bytes free
