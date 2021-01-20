@@ -122,6 +122,7 @@ export function NextQuestionButton(props) {
 	return (
 		<div style={{ position: "absolute", bottom: "50px", right: "80px" }}>
 			<Button
+				loading={props.delay}
 				danger
 				onClick={props.getNextQuestion}
 				style={{ color: "green", borderColor: "green" }}

@@ -27,6 +27,7 @@ class ConnectPicture extends Component {
 
 		this.state = {
 			value: -1,
+			delay: false,
 			blank: "_______",
 			radioColor: ["black", "black", "black", "black"],
 			question: "Connect_pic_therefore_B",
@@ -51,6 +52,11 @@ class ConnectPicture extends Component {
 			openNotification();
 			return;
 		}
+		//Turn on loading and then set time to disable loading
+		this.setState({ delay: true });
+		setTimeout(() => {
+			this.setState({ delay: false });
+		  }, 3000);
 
 		const ABCD = ["a", "b", "c", "d"];
 		let ans = ABCD[this.state.value];
@@ -93,7 +99,7 @@ class ConnectPicture extends Component {
 			value: -1,
 			radioColor: ["black", "black", "black", "black"],
 		});
-
+	
 		await FetchData("/sumCorrectIncorrect", "PUT", data)
 			.then((res) => {
 				if (res.status === 200) {
@@ -196,7 +202,7 @@ class ConnectPicture extends Component {
 					</Row>
 				</div>
 
-				<NextQuestionButton getNextQuestion={this.getNextQuestion} />
+				<NextQuestionButton getNextQuestion={this.getNextQuestion} delay={this.state.delay} />
 
 				<div style={{ position: "absolute", bottom: "0px", width: "100%" }}>
 					<SectionBar numSection={1} />
