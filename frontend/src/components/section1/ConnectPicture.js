@@ -118,6 +118,14 @@ class ConnectPicture extends Component {
 			});
 	};
 
+	nextQuestionDelay = () => {
+		this.setState({ delay: true });
+		setTimeout(() => {
+			this.getNextQuestion();
+			this.setState({ delay: false });
+		}, 1000);
+	};
+
 	playAudio = () => {
 		this.setState({
 			showElem: "inline",
@@ -202,7 +210,7 @@ class ConnectPicture extends Component {
 					</Row>
 				</div>
 
-				<NextQuestionButton getNextQuestion={this.getNextQuestion} delay={this.state.delay} />
+				<NextQuestionButton getNextQuestion={this.nextQuestionDelay} delay={this.state.delay} />
 
 				<div style={{ position: "absolute", bottom: "0px", width: "100%" }}>
 					<SectionBar numSection={1} />

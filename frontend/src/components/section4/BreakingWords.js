@@ -24,6 +24,7 @@ class BreakingWords extends Component {
 		super();
 
 		this.state = {
+			delay: false,
 			answerText: "",
 			question: "Morpho_activity",
 			showElem: "none",
@@ -32,6 +33,14 @@ class BreakingWords extends Component {
 
 	onChange = (e) => {
 		this.setState({ answerText: e.target.value });
+	};
+
+	nextQuestionDelay = () => {
+		this.setState({ delay: true });
+		setTimeout(() => {
+			this.getNextQuestion();
+			this.setState({ delay: false });
+		}, 1000);
 	};
 
 	playAudio = () => {
@@ -143,7 +152,7 @@ class BreakingWords extends Component {
 					</Row>
 				</div>
 
-				<NextQuestionButton getNextQuestion={this.getNextQuestion} />
+				<NextQuestionButton getNextQuestion={this.nextQuestionDelay} delay={this.state.delay} />
 
 				<div style={{ position: "absolute", bottom: "0px", width: "100%" }}>
 					<SectionBar numSection={4} />

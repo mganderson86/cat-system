@@ -24,6 +24,7 @@ class TrackingTheme extends Component {
 		super();
 
 		this.state = {
+			delay: false,
 			value: -1,
 			radioColor: ["black", "black", "black"],
 			question: "Anaphora_material",
@@ -39,6 +40,14 @@ class TrackingTheme extends Component {
 		let newRadioColor = ["black", "black", "black"];
 		newRadioColor[e.target.value] = "green";
 		this.setState({ radioColor: newRadioColor });
+	};
+
+	nextQuestionDelay = () => {
+		this.setState({ delay: true });
+		setTimeout(() => {
+			this.getNextQuestion();
+			this.setState({ delay: false });
+		}, 1000);
 	};
 
 	playAudio = () => {
@@ -196,7 +205,7 @@ class TrackingTheme extends Component {
 					</div>
 				</div>
 
-				<NextQuestionButton getNextQuestion={this.getNextQuestion} />
+				<NextQuestionButton getNextQuestion={this.nextQuestionDelay} delay={this.state.delay} />
 
 				<div style={{ position: "absolute", bottom: "0px", width: "100%" }}>
 					<SectionBar numSection={2} />

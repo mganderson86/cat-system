@@ -19,6 +19,7 @@ class SureOrUnsure extends Component {
 	constructor(props) {
 		super();
 		this.state = {
+			delay: false,
 			selectOption: -1,
 			question: "epis_impossible",
 			showElem: "none",
@@ -29,6 +30,14 @@ class SureOrUnsure extends Component {
 		this.setState({
 			showElem: "inline",
 		});
+	};
+
+	nextQuestionDelay = () => {
+		this.setState({ delay: true });
+		setTimeout(() => {
+			this.getNextQuestion();
+			this.setState({ delay: false });
+		}, 1000);
 	};
 
 	onChange = (e) => {
@@ -165,7 +174,7 @@ class SureOrUnsure extends Component {
 					</div>
 				</div>
 
-				<NextQuestionButton getNextQuestion={this.getNextQuestion} />
+				<NextQuestionButton getNextQuestion={this.nextQuestionDelay} delay={this.state.delay} />
 
 				<div style={{ position: "absolute", bottom: "0px", width: "100%" }}>
 					<SectionBar numSection={7} />

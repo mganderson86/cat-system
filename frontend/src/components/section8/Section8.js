@@ -72,7 +72,7 @@ class Section8 extends Component {
 								<ul>
 									<li>
 										<Text style={{ color: "black" }}>
-											First, read or listen the newspaper’s idea.
+											First, read or listen to the newspaper’s idea.
 										</Text>
 									</li>
 									<li>

@@ -24,6 +24,7 @@ class IdentifyingDefinitions extends Component {
 		super();
 
 		this.state = {
+			delay: false,
 			selectOption: -1,
 			optionA: -1,
 			optionB: -1,
@@ -49,6 +50,14 @@ class IdentifyingDefinitions extends Component {
 		this.setState({
 			showElem: "inline",
 		});
+	};
+
+	nextQuestionDelay = () => {
+		this.setState({ delay: true });
+		setTimeout(() => {
+			this.getNextQuestion();
+			this.setState({ delay: false });
+		}, 1000);
 	};
 
 	getNextQuestion = async (e) => {
@@ -340,7 +349,7 @@ class IdentifyingDefinitions extends Component {
 						</Radio.Group>
 					</div>
 				</div>
-				<NextQuestionButton getNextQuestion={this.getNextQuestion} />
+				<NextQuestionButton getNextQuestion={this.nextQuestionDelay} delay={this.state.delay} />
 
 				<div style={{ position: "absolute", bottom: "0px", width: "100%" }}>
 					<SectionBar numSection={6} />

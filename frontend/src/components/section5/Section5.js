@@ -1,7 +1,7 @@
 import { Divider, Typography, Col, Row } from "antd";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { FourPictures, NextButton } from "../utils/Utils";
+import { NextButton5 } from "../utils/Utils";
 import Pic from "../../play.png";
 import ReactAudioPlayer from "react-audio-player";
 
@@ -123,7 +123,7 @@ class Section5 extends Component {
 					</div>
 				
 				</div>
-				<NextButton link="/section5_1" />
+				<NextButton5 link="/section5_1" />
 															 
 			</div>
 		);

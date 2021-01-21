@@ -22,6 +22,7 @@ class ComprehendingSentences extends Component {
 		super();
 
 		this.state = {
+			delay: false,
 			selectOption: -1,
 			question: "Syntax_pic_1",
 			borderStyle: ["none", "none", "none", "none"],
@@ -35,6 +36,15 @@ class ComprehendingSentences extends Component {
 		newBorderStyle[val - 1] = "solid";
 		this.setState({ borderStyle: newBorderStyle });
 	};
+
+	nextQuestionDelay = () => {
+		this.setState({ delay: true });
+		setTimeout(() => {
+			this.getNextQuestion();
+			this.setState({ delay: false });
+		}, 1000);
+	};
+
 
 	getNextQuestion = async (e) => {
 		if (this.state.selectOption === -1) {
@@ -111,11 +121,11 @@ class ComprehendingSentences extends Component {
 			<div className="main-context-div" style={{ fontSize: this.props.fontSize }}>
 				<div className="comprehending_sentences">
 					<div>
-						<img src={Pic} height="54px" width="54px" alt="img" />
+						
 						<ReactAudioPlayer
 							style={{ display: this.state.showElem }}
 							src={audio}
-							controls
+							
 							autoPlay={true}
 						></ReactAudioPlayer>
 					</div>
@@ -161,7 +171,7 @@ class ComprehendingSentences extends Component {
 					</div>
 				</div>
 
-				<NextQuestionButton getNextQuestion={this.getNextQuestion} />
+				<NextQuestionButton getNextQuestion={this.nextQuestionDelay} delay={this.state.delay} />
 
 				<div style={{ position: "absolute", bottom: "0px", width: "100%" }}>
 					<SectionBar numSection={5} />

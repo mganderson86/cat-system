@@ -133,6 +133,16 @@ export function NextQuestionButton(props) {
 	);
 }
 
+export function NextButton5(props) {
+	return (
+		<div style={{ position: "absolute", bottom: "0px", right: "80px" }}>
+			<Button danger style={{ color: "green", borderColor: "green" }}>
+				<Link to={props.link}>Next</Link>
+			</Button>
+		</div>
+	);
+}
+
 export function AudioPlayer(props) {
 	return (
 		<div style={{ marginBottom: "5px", height: "50px" }}>

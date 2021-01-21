@@ -19,6 +19,7 @@ class UnderstandingResponses extends Component {
 	constructor(props) {
 		super();
 		this.state = {
+			delay: false,
 			selectOption: -1,
 			question: "meta_disagreeing",
 			showElem: "none",
@@ -30,6 +31,15 @@ class UnderstandingResponses extends Component {
 			showElem: "inline",
 		});
 	};
+
+	nextQuestionDelay = () => {
+		this.setState({ delay: true });
+		setTimeout(() => {
+			this.getNextQuestion();
+			this.setState({ delay: false });
+		}, 1000);
+	};
+
 
 	onChange = (e) => {
 		this.setState({
@@ -190,7 +200,7 @@ class UnderstandingResponses extends Component {
 					</Row>
 				</div>
 
-				<NextQuestionButton getNextQuestion={this.getNextQuestion} />
+				<NextQuestionButton getNextQuestion={this.nextQuestionDelay} delay={this.state.delay} />
 				<div style={{ position: "absolute", bottom: "0px", width: "100%" }}>
 					<SectionBar numSection={8} />
 				</div>

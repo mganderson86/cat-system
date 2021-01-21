@@ -28,6 +28,7 @@ class ConnectSentence extends Component {
 		super();
 		this.state = {
 			bodyText: "",
+			delay: false,
 			blank: "________________",
 			selectOption: -1,
 			question: "Connect_sent_however",
@@ -53,6 +54,14 @@ class ConnectSentence extends Component {
 		this.setState({
 			showElem: "inline",
 		});
+	};
+
+	nextQuestionDelay = () => {
+		this.setState({ delay: true });
+		setTimeout(() => {
+			this.getNextQuestion();
+			this.setState({ delay: false });
+		}, 1000);
 	};
 
 	getNextQuestion = async (e) => {
@@ -216,7 +225,7 @@ class ConnectSentence extends Component {
 					</Row> */}
 				</div>
 
-				<NextQuestionButton getNextQuestion={this.getNextQuestion} />
+				<NextQuestionButton getNextQuestion={this.nextQuestionDelay} delay={this.state.delay} />
 
 				<div style={{ position: "absolute", bottom: "0px", width: "100%" }}>
 					<SectionBar numSection={1} />

@@ -24,6 +24,7 @@ class DragAndSwap extends Component {
 	constructor(props) {
 		super();
 		this.state = {
+			delay: false,
 			question: "Anagram_recess",
 			numOfOptions: 0,
 			textOptions: [],
@@ -207,6 +208,15 @@ class DragAndSwap extends Component {
 					this.componentDidMount();
 				}
 			});
+		this.setState({ showElem: "none"})
+	};
+
+	nextQuestionDelay = () => {
+		this.setState({ delay: true });
+		setTimeout(() => {
+			this.getNextQuestion();
+			this.setState({ delay: false });
+		}, 1000);
 	};
 
 	playAudio = () => {
@@ -223,7 +233,7 @@ class DragAndSwap extends Component {
 				<Title level={3} align="middle">
 					{this.state.title}
 				</Title>
-				<div style={{ height: "50px", position: "absolute", top: "2%" }}>
+				<div style={{ height: "50px", position: "absolute", top: "4%" }}>
 					<img onClick={this.playAudio} src={Pic} height="54px" width="54px" alt="img" />
 					<ReactAudioPlayer
 						style={{ display: this.state.showElem, verticalAlign: "middle" }}
@@ -265,7 +275,7 @@ class DragAndSwap extends Component {
 					</div>
 				</div>
 
-				<NextQuestionButton getNextQuestion={this.getNextQuestion} />
+				<NextQuestionButton getNextQuestion={this.nextQuestionDelay} delay={this.state.delay} />
 
 				<div style={{ position: "absolute", bottom: "0px", width: "100%" }}>
 					<SectionBar numSection={3} />
