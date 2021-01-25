@@ -324,7 +324,7 @@ class IdentifyingDefinitions extends Component {
 									color: this.state.radioColor[0],
 									fontSize: this.props.fontSize,
 								}}
-								value={0}
+								value={1}
 							>
 								A
 							</Radio>
@@ -333,7 +333,7 @@ class IdentifyingDefinitions extends Component {
 									color: this.state.radioColor[1],
 									fontSize: this.props.fontSize,
 								}}
-								value={1}
+								value={2}
 							>
 								B
 							</Radio>
@@ -342,7 +342,7 @@ class IdentifyingDefinitions extends Component {
 									color: this.state.radioColor[2],
 									fontSize: this.props.fontSize,
 								}}
-								value={2}
+								value={3}
 							>
 								C
 							</Radio>

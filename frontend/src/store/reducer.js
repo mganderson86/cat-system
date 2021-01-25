@@ -454,7 +454,7 @@ export const defaultState = {
 		audio: "../Site/audio/Connect_sent_incontrast.mp3",
 	},
 	Anaphora_aunt: {
-		text1: " ",
+		text1: "  ",
 		keyword: "It",
 		text2: "must have been difficult on your aunt, having to work so many hours during the holiday season at the department store.",
 		choice: [
@@ -466,7 +466,7 @@ export const defaultState = {
 		audio: "../Site/audio/Anaphora_aunt.mp3",
 	},
 	Anaphora_explorer: {
-		text1: "Scott's team and Johnson's team tried to reach the top of the tallest mountain. Johnson's team made it to the top first because of",
+		text1: "Scott's team and Johnson's team tried to reach the top of the tallest mountain. Johnson's team made it to the top first because of ",
 		keyword: "this explorer's",
 		text2: "leadership.",
 		choice: [
@@ -478,7 +478,7 @@ export const defaultState = {
 		audio: "../Site/audio/Anaphora_explorer.mp3",
 	},
 	Anaphora_fest: {
-		text1: " ",
+		text1: "  ",
 		keyword: "It",
 		text2: "has often been compared to Summer Fest, one of the largest festivals in the south. Stuartville's streets are as crowded as they are during Summer Fest. Since it began last week, three million people have attended the Stuartville Fisherman's Festival.",
 		choice: [
@@ -490,7 +490,7 @@ export const defaultState = {
 		audio: "../Site/audio/Anaphora_fest.mp3",
 	},
 	Anaphora_material: {
-		text1: "Major volcanic eruptions release huge quantities of gases and ash into the air.",
+		text1: "Major volcanic eruptions release huge quantities of gases and ash into the air. ",
 		keyword: "These materials",
 		text2: "can stay in the upper atmosphere for months or years.",
 		choice: [
@@ -502,7 +502,7 @@ export const defaultState = {
 		audio: "../Site/audio/Anaphora_material.mp3",
 	},
 	Anaphora_movement: {
-		text1: "China resisted the move for change. In 1989, students protested to demand changes, but the army opposed these changes. Troops were sent to stop",
+		text1: "China resisted the move for change. In 1989, students protested to demand changes, but the army opposed these changes. Troops were sent to stop ",
 		keyword: "the movement",
 		text2: ".",
 		choice: [
@@ -514,7 +514,7 @@ export const defaultState = {
 		audio: "../Site/audio/Anaphora_movement.mp3",
 	},
 	Anaphora_phenom: {
-		text1: "Our planet is made up of many layers of rock. The top layers are formed of solid rock. The deep layer is so hot that some rock melts. Volcanoes are formed when the melted rock pushes its way up through the top layers.",
+		text1: "Our planet is made up of many layers of rock. The top layers are formed of solid rock. The deep layer is so hot that some rock melts. Volcanoes are formed when the melted rock pushes its way up through the top layers. ",
 		keyword: "This phenomenon",
 		text2: "has been broadly studied.",
 		choice: [
@@ -526,7 +526,7 @@ export const defaultState = {
 		audio: "../Site/audio/Anaphora_phenom.mp3",
 	},
 	Anaphora_system: {
-		text1: "In April 2010, an international company caused a big oil explosion in the Gulf of Mexico. Scientists worry about the impact of oil spills like this one on sea life. Animals, plant life, and coral, that make their homes in oceans can suffer when oil is in the water. Scientists say",
+		text1: "In April 2010, an international company caused a big oil explosion in the Gulf of Mexico. Scientists worry about the impact of oil spills like this one on sea life. Animals, plant life, and coral, that make their homes in oceans can suffer when oil is in the water. Scientists say ",
 		keyword: "this system",
 		text2: "is already weak and needs to be protected.",
 		choice: [
@@ -538,7 +538,7 @@ export const defaultState = {
 		audio: "../Site/audio/Anaphora_system.mp3",
 	},
 	Anaphora_animals: {
-		text1: "During the school trip to the zoo, many of the students noticed that the animals were all sleeping. Mrs. John told the students that",
+		text1: "During the school trip to the zoo, many of the students noticed that the animals were all sleeping. Mrs. John told the students that ",
 		keyword: "they",
 		text2: "are probably tired.",
 		choice: [
@@ -550,7 +550,7 @@ export const defaultState = {
 		audio: "../Site/audio/Anaphora_animals.mp3",
 	},
 	Anaphora_covered: {
-		text1: "Mars' red color comes from a chemical in its soil. When this chemical touches oxygen, it rusts and becomes red in color. How exactly the entire planet came to be covered in this red soil is a subject of debate among scientists. Some believe that",
+		text1: "Mars' red color comes from a chemical in its soil. When this chemical touches oxygen, it rusts and becomes red in color. How exactly the entire planet came to be covered in this red soil is a subject of debate among scientists. Some believe that ",
 		keyword: "this process",
 		text2: "occurred long ago when water still flowed on Mars' surface, spreading the dust across the planet.",
 		choice: [
@@ -562,7 +562,7 @@ export const defaultState = {
 		audio: "../Site/audio/Anaphora_covered.mp3",
 	},
 	Anaphora_difficultplane: {
-		text1: "In 1903, the Wright brothers flew their first airplane. To fly the plane, the pilot laid on his stomach. Their plane was difficult to control in the air and was damaged after only four flights. The Wright brothers tried to solve",
+		text1: "In 1903, the Wright brothers flew their first airplane. To fly the plane, the pilot laid on his stomach. Their plane was difficult to control in the air and was damaged after only four flights. The Wright brothers tried to solve ",
 		keyword: "this problem",
 		text2: "in the next plane that they built.",
 		choice: [
@@ -574,7 +574,7 @@ export const defaultState = {
 		audio: "../Site/audio/Anaphora_difficultplane.mp3",
 	},
 	Anaphora_earth: {
-		text1: "The Earth rotates on its axis once every 24 hours.",
+		text1: "The Earth rotates on its axis once every 24 hours. ",
 		keyword: "It",
 		text2: "orbits the sun once every 365 days.",
 		choice: [
@@ -586,7 +586,7 @@ export const defaultState = {
 		audio: "../Site/audio/Anaphora_earth.mp3",
 	},
 	Anaphora_financialfallout: {
-		text1: "When the financial fallout began in the mid 1920's the country could not predict its impact on individuals. It was",
+		text1: "When the financial fallout began in the mid 1920's the country could not predict its impact on individuals. It was ",
 		keyword: "this event",
 		text2: "that led to a decade of tremendous financial hardship, known as the Great Depression, which would shape the lives of millions of people and lead to distrust of Wall Street.",
 		choice: [
@@ -598,7 +598,7 @@ export const defaultState = {
 		audio: "../Site/audio/Anaphora_financialfallout.mp3",
 	},
 	Anaphora_liquid: {
-		text1: "Air temperature is measured using thermometers. Thermometers work because the liquid metal contained in the thermometer expands when",
+		text1: "Air temperature is measured using thermometers. Thermometers work because the liquid metal contained in the thermometer expands when ",
 		keyword: "they",
 		text2: "are cooled.",
 		choice: [
@@ -610,7 +610,7 @@ export const defaultState = {
 		audio: "../Site/audio/Anaphora_liquid.mp3",
 	},
 	Anaphora_olympicgames: {
-		text1: "During the Olympic Games, countries from around the world send athletes to compete in various sporting events.",
+		text1: "During the Olympic Games, countries from around the world send athletes to compete in various sporting events. ",
 		keyword: "These competitions",
 		text2: "are divided into two categories: winter and summer.",
 		choice: [
@@ -622,7 +622,7 @@ export const defaultState = {
 		audio: "../Site/audio/Anaphora_olympicgames.mp3",
 	},
 	Anaphora_scienceprojects: {
-		text1: "For weeks, the class prepared their science projects. Finally, the day of the Science Fair arrived and students were excited to show their",
+		text1: "For weeks, the class prepared their science projects. Finally, the day of the Science Fair arrived and students were excited to show their ",
 		keyword: "hard work",
 		text2: ".",
 		choice: [
@@ -634,7 +634,7 @@ export const defaultState = {
 		audio: "../Site/audio/Anaphora_scienceprojects.mp3",
 	},
 	Anaphora_voting: {
-		text1: "In the United States and in some other countries, citizens choose the president by voting. Whether or not the system works perfectly,",
+		text1: "In the United States and in some other countries, citizens choose the president by voting. Whether or not the system works perfectly, ",
 		keyword: "it",
 		text2: "is better than a system in which citizens do not vote.",
 		choice: [
@@ -646,7 +646,7 @@ export const defaultState = {
 		audio: "../Site/audio/Anaphora_voting.mp3",
 	},
 	Anaphora_telescope: {
-		text1: "The scientist worked to get the telescope ready for the meteor shower. Working tirelessly for months the day finally came for the",
+		text1: "The scientist worked to get the telescope ready for the meteor shower. Working tirelessly for months the day finally came for the ",
 		keyword: "project",
 		text2: "to be realized.",
 		choice: [
@@ -658,7 +658,7 @@ export const defaultState = {
 		audio: "../Site/audio/Anaphora_telescope.mp3",
 	},
 	Anaphora_stateexam: {
-		text1: "For the students,",
+		text1: "For the students, ",
 		keyword: "the time",
 		text2: "had come. After months of studying they were finally ready to take their state exam.",
 		choice: [
@@ -983,7 +983,7 @@ export const defaultState = {
 		epis_acc_appears: {
 			text0: "The scientist thinks:",
 			text1: "The rock appears to be from space.",
-			text2: "For the scientist, is the rock from space?",
+			text2: "Does this scientist think that the the rock comes from space?",
 			answer:  2,
 			audio: "../Site/audio/epis_acc_appears.mp3",
 			description: "rock_from_space",
@@ -992,7 +992,7 @@ export const defaultState = {
 		epis_acc_unquestion: {
 			text0: "The scientist thinks:",
 			text1: "It is unquestionable that the rock is from space.",
-			text2: "For the scientist, is the rock from space?",
+			text2: "Does this scientist think that the the rock comes from space?",
 			answer:  1,
 			audio: "../Site/audio/epis_acc_unquestion.mp3",
 			description: "rock_from_space",
@@ -1001,7 +1001,7 @@ export const defaultState = {
 		epis_certainly: {
 			text0: "The scientist thinks:",
 			text1: "Certainly, the rock is from space.",
-			text2: "For the scientist, is the rock from space?",
+			text2: "Does this scientist think that the the rock comes from space?",
 			answer:  1,
 			audio: "../Site/audio/epis_certainly.mp3",
 			description: "rock_from_space",
@@ -1010,7 +1010,7 @@ export const defaultState = {
 		epis_conclusively: {
 			text0: "The scientist thinks:",
 			text1: "Conclusively, the rock is from space.",
-			text2: "For the scientist, is the rock from space?",
+			text2: "Does this scientist think that the the rock comes from space?",
 			answer:  1,
 			audio: "../Site/audio/epis_conclusively.mp3",
 			description: "rock_from_space",
@@ -1019,7 +1019,7 @@ export const defaultState = {
 		epis_impossible: {
 			text0: "The scientist thinks:",
 			text1: "It is impossible that the rock is from space.",
-			text2: "For the scientist, is the rock from space?",
+			text2: "Does this scientist think that the the rock comes from space?",
 			answer:  4,
 			audio: "../Site/audio/epis_impossible.mp3",
 			description: "rock_from_space",
@@ -1028,7 +1028,7 @@ export const defaultState = {
 		epis_obvious: {
 			text0: "The scientist thinks:",
 			text1: "It is obvious that the rock is from space.",
-			text2: "For the scientist, is the rock from space?",
+			text2: "Does this scientist think that the the rock comes from space?",
 			answer:  1,
 			audio: "../Site/audio/epis_obvious.mp3",
 			description: "rock_from_space",
@@ -1037,7 +1037,7 @@ export const defaultState = {
 		epis_possible: {
 			text0: "The scientist thinks:",
 			text1: "It is possible that the rock is from space.",
-			text2: "For the scientist, is the rock from space?",
+			text2: "Does this scientist think that the the rock comes from space?",
 			answer:  2,
 			audio: "../Site/audio/epis_possible.mp3",
 			description: "rock_from_space",
@@ -1046,7 +1046,7 @@ export const defaultState = {
 		epis_possiblebutunlikely: {
 			text0: "The scientist thinks:",
 			text1: "It is possible, but unlikely that the rock is from space.",
-			text2: "For the scientist, is the rock from space?",
+			text2: "Does this scientist think that the the rock comes from space?",
 			answer:  3,
 			audio: "../Site/audio/epis_possiblebutunlikely.mp3",
 			description: "rock_from_space",
@@ -1055,7 +1055,7 @@ export const defaultState = {
 		epis_presumably: {
 			text0: "The scientist thinks:",
 			text1: "Presumably, the rock is from space.",
-			text2: "For the scientist, is the rock from space?",
+			text2: "Does this scientist think that the the rock comes from space?",
 			answer:  2,
 			audio: "../Site/audio/epis_presumably.mp3",
 			description: "rock_from_space",
@@ -1064,7 +1064,7 @@ export const defaultState = {
 		epis_probably: {
 			text0: "The scientist thinks:",
 			text1: "The rock is probably from space.",
-			text2: "For the scientist, is the rock from space?",
+			text2: "Does this scientist think that the the rock comes from space?",
 			answer:  2,
 			audio: "../Site/audio/epis_probably.mp3",
 			description: "rock_from_space",
@@ -1073,7 +1073,7 @@ export const defaultState = {
 		epis_suggest: {
 			text0: "The scientist thinks:",
 			text1: "Results suggest that the rock is from space.",
-			text2: "For the scientist, is the rock from space?",
+			text2: "Does this scientist think that the the rock comes from space?",
 			answer:  2,
 			audio: "../Site/audio/epis_suggest.mp3",
 			description: "rock_from_space",
@@ -1082,7 +1082,7 @@ export const defaultState = {
 		epis_unlikely: {
 			text0: "The scientist thinks:",
 			text1: "It is unlikely that the rock is from space.",
-			text2: "For the scientist, is the rock from space?",
+			text2: "Does this scientist think that the the rock comes from space?",
 			answer:  3,
 			audio: "../Site/audio/epis_unlikely.mp3",
 			description: "rock_from_space",
@@ -1091,7 +1091,7 @@ export const defaultState = {
 		epis_acc_certainlynot: {
 			text0: "The scientist thinks:",
 			text1: "The rock is certainly not from space.",
-			text2: "For the scientist, is the rock from space?",
+			text2: "Does this scientist think that the the rock comes from space?",
 			answer:  4,
 			audio: "../Site/audio/epis_acc_certainlynot.mp3",
 			description: "rock_from_space",
@@ -1100,7 +1100,7 @@ export const defaultState = {
 		epis_acc_unlikelybut: {
 			text0: "The scientist thinks:",
 			text1: "It is unlikely but possible that the rock is from space.",
-			text2: "For the scientist, is the rock from space?",
+			text2: "Does this scientist think that the the rock comes from space?",
 			answer:  3,
 			audio: "../Site/audio/epis_acc_unlikelybut.mp3",
 			description: "rock_from_space",
@@ -1109,7 +1109,7 @@ export const defaultState = {
 		epis_soc_apparently: {
 			text0: "Jessie's friend thinks:",
 			text1: "Apparently, Jessie is coming today.",
-			text2: "For Jessie's friend, is Jessie coming to school?",
+			text2: "Does this friend think Jessie is coming to school today?",
 			answer:  2,
 			audio: "../Site/audio/epis_soc_apparently.mp3",
 			description: "is_Jessie_coming",
@@ -1118,7 +1118,7 @@ export const defaultState = {
 		epis_soc_certainly: {
 			text0: "Jessie's friend thinks:",
 			text1: "Certainly, Jessie is coming today.",
-			text2: "For Jessie's friend, is Jessie coming to school?",
+			text2: "Does this friend think Jessie is coming to school today?",
 			answer:  1,
 			audio: "../Site/audio/epis_soc_certainly.mp3",
 			description: "is_Jessie_coming",
@@ -1127,7 +1127,7 @@ export const defaultState = {
 		epis_soc_impossible: {
 			text0: "Jessie's friend thinks:",
 			text1: "It is impossible that Jessie is coming today.",
-			text2: "For Jessie's friend, is Jessie coming to school?",
+			text2: "Does this friend think Jessie is coming to school today?",
 			answer:  4,
 			audio: "../Site/audio/epis_soc_impossible.mp3",
 			description: "is_Jessie_coming",
@@ -1136,7 +1136,7 @@ export const defaultState = {
 		epis_soc_possible: {
 			text0: "Jessie's friend thinks:",
 			text1: "It is possible but unlikely that Jessie is coming today.",
-			text2: "For Jessie's friend, is Jessie coming to school?",
+			text2: "Does this friend think Jessie is coming to school today?",
 			answer:  3,
 			audio: "../Site/audio/epis_soc_possible.mp3",
 			description: "is_Jessie_coming",
@@ -1145,7 +1145,7 @@ export const defaultState = {
 		epis_soc_probably: {
 			text0: "Jessie's friend thinks:",
 			text1: "Jessie is probably coming today.",
-			text2: "For Jessie's friend, is Jessie coming to school?",
+			text2: "Does this friend think Jessie is coming to school today?",
 			answer:  2,
 			audio: "../Site/audio/epis_soc_probably.mp3",
 			description: "is_Jessie_coming",
@@ -1154,7 +1154,7 @@ export const defaultState = {
 		epis_soc_seems: {
 			text0: "Jessie's friend thinks:",
 			text1: "It seems that Jessie is coming today.",
-			text2: "For Jessie's friend, is Jessie coming to school?",
+			text2: "Does this friend think Jessie is coming to school today?",
 			answer:  2,
 			audio: "../Site/audio/epis_soc_seems.mp3",
 			description: "is_Jessie_coming",
@@ -1163,7 +1163,7 @@ export const defaultState = {
 		epis_soc_unlikely: {
 			text0: "Jessie's friend thinks:",
 			text1: "Jessie is unlikely to come today.",
-			text2: "For Jessie's friend, is Jessie coming to school?",
+			text2: "Does this friend think Jessie is coming to school today?",
 			answer:  3,
 			audio: "../Site/audio/epis_soc_unlikely.mp3",
 			description: "is_Jessie_coming",
