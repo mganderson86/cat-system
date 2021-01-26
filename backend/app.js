@@ -9,8 +9,8 @@ var cors = require("cors");
 app.use(
 	cors({
 		credentials: true,
-		// origin: "http://hbs-310s-it-xxx.times.uh.edu",
-		origin: "http://localhost:3000",
+		// origin: "http://hbs-310s-it-xxx.times.uh.edu", //production
+		origin: "http://localhost:3000", //development
 		exposedHeaders: ["Origin", "X-Requested-With", "Content-Type, Accept"],
 	})
 );
@@ -132,4 +132,5 @@ var server = app.listen(5000, function () {
 	console.log(`Server listening at http://${addr.address}:${addr.port}`);
 });
 
+server.timeout = 15000; //set timeout to  15 seconds
 // module.exports = app;

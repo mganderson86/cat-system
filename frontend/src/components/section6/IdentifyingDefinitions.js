@@ -73,7 +73,12 @@ class IdentifyingDefinitions extends Component {
 		
 		let id = sessionStorage.getItem("ID");
 		
-		await FetchData("/UpdateCATAnswer/" + id, "PUT", catAns).then((res) => res.json());
+		if (id !== null ) {
+			await FetchData("/UpdateCATAnswer/" + id, "PUT", catAns).then((res) => res.json());
+		} else {
+				alert("No ID set. You will be returned to the beginning.");
+				return this.props.history.push("/demo");
+		}
 
 		let judgeOfAnswer;
 		const correctAns = this.props.curState.DEFINITIONS_AWARENESS[this.state.question].answer;
@@ -165,7 +170,7 @@ class IdentifyingDefinitions extends Component {
 									textAlign: "center",
 								}}
 							>
-								<Text strong>A </Text> was written for:
+								<span style={{ fontSize: "small" }} >this was written for:</span>
 							</div>
 						</Col>
 						<Col span={4}>
@@ -220,7 +225,7 @@ class IdentifyingDefinitions extends Component {
 									textAlign: "center",
 								}}
 							>
-								<Text strong>B </Text> was written for:
+								<span style={{ fontSize: "small" }} >this was written for:</span>
 							</div>
 						</Col>
 						<Col span={4}>
@@ -275,7 +280,7 @@ class IdentifyingDefinitions extends Component {
 									textAlign: "center",
 								}}
 			>
-								<Text strong>C </Text> was written for:
+								<span style={{ fontSize: "small" }} >this was written for:</span>
 							</div>
 						</Col>
 						<Col span={4}>
@@ -317,7 +322,7 @@ class IdentifyingDefinitions extends Component {
 						adults.
 					</Row>
 					<div style={{ margin: "40px", display: "flex", justifyContent: "center", alignItems: "center" }}>
-						<div> Click ony one: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						<div> Click only one: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 						<Radio.Group onChange={this.onChange} size="large" value={this.state.selectOption}>
 							<Radio
 								style={{

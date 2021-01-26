@@ -140,7 +140,7 @@ class Section7 extends Component {
 											paddingLeft: "50px",
 										}}
 									>
-										We will for sure not have a quiz tomorrow.
+										For sure, we will not have a quiz tomorrow. 
 									</div>
 								</Col>
 							</Row>

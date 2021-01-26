@@ -97,18 +97,20 @@ class DragAndSwap extends Component {
 			ans = ans + curAnsId[idx];
 		}*/
 
-		let recordAns = {
+		let catAns = {
 			question: this.state.question,
 			answer: ans,
 		};
 
 		let id = sessionStorage.getItem("ID");
 		
-		await FetchData("/UpdateCATAnswer/" + id, "PUT", recordAns)
-			.then((res) => res.json())
-			.then((res) => {
-				// console.log(res);
-			});
+		if (id !== null ) {
+			await FetchData("/UpdateCATAnswer/" + id, "PUT", catAns).then((res) => res.json());
+		} else {
+				alert("No ID set. You will be returned to the beginning.");
+				return this.props.history.push("/demo");
+		}
+
 
 		// Get question texts and ans
 		const questionText = this.props.curState.Anagram[this.state.question];

@@ -72,11 +72,12 @@ class TrackingTheme extends Component {
 		
 		let id = sessionStorage.getItem("ID");
 		
-		await FetchData("/UpdateCATAnswer/" + id, "PUT", catAns)
-			.then((res) => res.json())
-			.then((res) => {
-				// console.log(res);
-			});
+		if (id !== null ) {
+			await FetchData("/UpdateCATAnswer/" + id, "PUT", catAns).then((res) => res.json());
+		} else {
+				alert("No ID set. You will be returned to the beginning.");
+				return this.props.history.push("/demo");
+		}
 
 		let judgeOfAnswer;
 		const questionText = this.props.curState[this.state.question].answer - 1;

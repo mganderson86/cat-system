@@ -70,7 +70,7 @@ class Section1 extends Component {
 							</li>
 							<li>
 								<Text className="text_div" style={{ color: "black" }}>
-									Then, click the option that best complete the sentences.
+									Then, click the option that best completes the sentences.
 								</Text>
 							</li>
 							<li>

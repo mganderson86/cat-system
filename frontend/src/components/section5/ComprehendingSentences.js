@@ -59,11 +59,12 @@ class ComprehendingSentences extends Component {
 		
 		let id = sessionStorage.getItem("ID");
 		
-		await FetchData("/UpdateCATAnswer/" + id, "PUT", catAns)
-			.then((res) => res.json())
-			.then((res) => {
-				// console.log(res);
-			});
+		if (id !== null ) {
+			await FetchData("/UpdateCATAnswer/" + id, "PUT", catAns).then((res) => res.json());
+		} else {
+				alert("No ID set. You will be returned to the beginning.");
+				return this.props.history.push("/demo");
+		}
 
 		let judgeOfAnswer;
 		const correctAns = this.props.curState.SYNTAX_PICTURES[this.state.question].answer;

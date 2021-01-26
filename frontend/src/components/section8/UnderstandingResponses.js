@@ -60,7 +60,12 @@ class UnderstandingResponses extends Component {
 		
 		let id = sessionStorage.getItem("ID");
 		
-		await FetchData("/UpdateCATAnswer/" + id, "PUT", catAns).then((res) => res.json());
+		if (id !== null ) {
+			await FetchData("/UpdateCATAnswer/" + id, "PUT", catAns).then((res) => res.json());
+		} else {
+				alert("No ID set. You will be returned to the beginning.");
+				return this.props.history.push("/demo");
+		}
 
 		let judgeOfAnswer;
 		const correctAns = this.props.curState.METALINGUISTIC[this.state.question].answer;
