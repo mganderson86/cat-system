@@ -222,8 +222,8 @@ const { Title } = Typography;
          })}*/
          onSubmit={(values, { setSubmitting }) => {
            setTimeout(() => {
-             //alert(JSON.stringify(values, null, 2));
-             this.SubmitData(values);     /*put data to database; will need to get a unique id for next section */
+             alert(JSON.stringify(values, null, 2));
+             //this.SubmitData(values);     /*put data to database; will need to get a unique id for next section */
              setSubmitting(false);
            }, 1000);
 

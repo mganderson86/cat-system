@@ -598,7 +598,7 @@ export const defaultState = {
 		audio: "../Site/audio/Anaphora_financialfallout.mp3",
 	},
 	Anaphora_liquid: {
-		text1: "Air temperature is measured using thermometers. Thermometers work because the liquid metal contained in the thermometer expands when ",
+		text1: "Air temperature is measured using thermometers. Thermometers work because the liquid metal contained in the thermometer expands when they are heated and contracts when ",
 		keyword: "they",
 		text2: "are cooled.",
 		choice: [
@@ -646,13 +646,13 @@ export const defaultState = {
 		audio: "../Site/audio/Anaphora_voting.mp3",
 	},
 	Anaphora_telescope: {
-		text1: "The scientist worked to get the telescope ready for the meteor shower. Working tirelessly for months the day finally came for the ",
-		keyword: "project",
+		text1: "The scientist worked to get the telescope ready for the meteor shower. She worked tirelessly for months in her lab until the day finally came for ",
+		keyword: "the project",
 		text2: "to be realized.",
 		choice: [
 			"get the telescope ready",
-			"watching the meteor shower",
-			"working tirelessly",
+			"the meteor shower",
+			"her lab",
 		],
 		answer:  1,
 		audio: "../Site/audio/Anaphora_telescope.mp3",
@@ -983,7 +983,7 @@ export const defaultState = {
 		epis_acc_appears: {
 			text0: "The scientist thinks:",
 			text1: "The rock appears to be from space.",
-			text2: "Does this scientist think that the the rock comes from space?",
+			text2: "Does this scientist think that the rock comes from space?",
 			answer:  2,
 			audio: "../Site/audio/epis_acc_appears.mp3",
 			description: "rock_from_space",
@@ -992,7 +992,7 @@ export const defaultState = {
 		epis_acc_unquestion: {
 			text0: "The scientist thinks:",
 			text1: "It is unquestionable that the rock is from space.",
-			text2: "Does this scientist think that the the rock comes from space?",
+			text2: "Does this scientist think that the rock comes from space?",
 			answer:  1,
 			audio: "../Site/audio/epis_acc_unquestion.mp3",
 			description: "rock_from_space",
@@ -1001,7 +1001,7 @@ export const defaultState = {
 		epis_certainly: {
 			text0: "The scientist thinks:",
 			text1: "Certainly, the rock is from space.",
-			text2: "Does this scientist think that the the rock comes from space?",
+			text2: "Does this scientist think that the rock comes from space?",
 			answer:  1,
 			audio: "../Site/audio/epis_certainly.mp3",
 			description: "rock_from_space",
@@ -1010,7 +1010,7 @@ export const defaultState = {
 		epis_conclusively: {
 			text0: "The scientist thinks:",
 			text1: "Conclusively, the rock is from space.",
-			text2: "Does this scientist think that the the rock comes from space?",
+			text2: "Does this scientist think that the rock comes from space?",
 			answer:  1,
 			audio: "../Site/audio/epis_conclusively.mp3",
 			description: "rock_from_space",
@@ -1019,7 +1019,7 @@ export const defaultState = {
 		epis_impossible: {
 			text0: "The scientist thinks:",
 			text1: "It is impossible that the rock is from space.",
-			text2: "Does this scientist think that the the rock comes from space?",
+			text2: "Does this scientist think that the rock comes from space?",
 			answer:  4,
 			audio: "../Site/audio/epis_impossible.mp3",
 			description: "rock_from_space",
@@ -1028,7 +1028,7 @@ export const defaultState = {
 		epis_obvious: {
 			text0: "The scientist thinks:",
 			text1: "It is obvious that the rock is from space.",
-			text2: "Does this scientist think that the the rock comes from space?",
+			text2: "Does this scientist think that the rock comes from space?",
 			answer:  1,
 			audio: "../Site/audio/epis_obvious.mp3",
 			description: "rock_from_space",
@@ -1037,7 +1037,7 @@ export const defaultState = {
 		epis_possible: {
 			text0: "The scientist thinks:",
 			text1: "It is possible that the rock is from space.",
-			text2: "Does this scientist think that the the rock comes from space?",
+			text2: "Does this scientist think that the rock comes from space?",
 			answer:  2,
 			audio: "../Site/audio/epis_possible.mp3",
 			description: "rock_from_space",
@@ -1046,7 +1046,7 @@ export const defaultState = {
 		epis_possiblebutunlikely: {
 			text0: "The scientist thinks:",
 			text1: "It is possible, but unlikely that the rock is from space.",
-			text2: "Does this scientist think that the the rock comes from space?",
+			text2: "Does this scientist think that the rock comes from space?",
 			answer:  3,
 			audio: "../Site/audio/epis_possiblebutunlikely.mp3",
 			description: "rock_from_space",
@@ -1055,7 +1055,7 @@ export const defaultState = {
 		epis_presumably: {
 			text0: "The scientist thinks:",
 			text1: "Presumably, the rock is from space.",
-			text2: "Does this scientist think that the the rock comes from space?",
+			text2: "Does this scientist think that the rock comes from space?",
 			answer:  2,
 			audio: "../Site/audio/epis_presumably.mp3",
 			description: "rock_from_space",
@@ -1064,7 +1064,7 @@ export const defaultState = {
 		epis_probably: {
 			text0: "The scientist thinks:",
 			text1: "The rock is probably from space.",
-			text2: "Does this scientist think that the the rock comes from space?",
+			text2: "Does this scientist think that the rock comes from space?",
 			answer:  2,
 			audio: "../Site/audio/epis_probably.mp3",
 			description: "rock_from_space",
@@ -1073,7 +1073,7 @@ export const defaultState = {
 		epis_suggest: {
 			text0: "The scientist thinks:",
 			text1: "Results suggest that the rock is from space.",
-			text2: "Does this scientist think that the the rock comes from space?",
+			text2: "Does this scientist think that the rock comes from space?",
 			answer:  2,
 			audio: "../Site/audio/epis_suggest.mp3",
 			description: "rock_from_space",
@@ -1082,7 +1082,7 @@ export const defaultState = {
 		epis_unlikely: {
 			text0: "The scientist thinks:",
 			text1: "It is unlikely that the rock is from space.",
-			text2: "Does this scientist think that the the rock comes from space?",
+			text2: "Does this scientist think that the rock comes from space?",
 			answer:  3,
 			audio: "../Site/audio/epis_unlikely.mp3",
 			description: "rock_from_space",
@@ -1091,7 +1091,7 @@ export const defaultState = {
 		epis_acc_certainlynot: {
 			text0: "The scientist thinks:",
 			text1: "The rock is certainly not from space.",
-			text2: "Does this scientist think that the the rock comes from space?",
+			text2: "Does this scientist think that the rock comes from space?",
 			answer:  4,
 			audio: "../Site/audio/epis_acc_certainlynot.mp3",
 			description: "rock_from_space",
@@ -1100,7 +1100,7 @@ export const defaultState = {
 		epis_acc_unlikelybut: {
 			text0: "The scientist thinks:",
 			text1: "It is unlikely but possible that the rock is from space.",
-			text2: "Does this scientist think that the the rock comes from space?",
+			text2: "Does this scientist think that the rock comes from space?",
 			answer:  3,
 			audio: "../Site/audio/epis_acc_unlikelybut.mp3",
 			description: "rock_from_space",
@@ -1283,7 +1283,7 @@ export const defaultState = {
 			type: "pencil",
 			img: "meta_generalization.png",
 			options: [
-				"an evaluaton",
+				"an evaluation",
 				"an overgeneralization",
 				"a recommendation",
 				"a contradiction",
