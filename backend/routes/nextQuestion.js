@@ -43,7 +43,7 @@ async function sumCorrectIncorrect(req, res) {
 			.input("bValue", mssql.Decimal, ThetaValue)
 			.output("name", mssql.NChar) // output
 			.execute("dbo.SelectNextQuestion");
-		let nextQuestion = result3.output.name;
+			let nextQuestion = (result3.output.name !== null) ? result3.output.name : ""; //return blank if no more questions; go to next
 		console.log(nextQuestion.trim());
 		res.send({ nextQuestion: nextQuestion.trim() });
 	} catch (err) {
