@@ -6,6 +6,8 @@ node_modules/
 # production
 build/
 
+# ignore config.js
+config.js
 # misc
 .DS_Store
 
