@@ -75,6 +75,7 @@ app.put("/InsertStudentInformation", function (req, res) {
 	const languagesHome = req.body.languagesHome;
 	const OtherLanguagePeople = req.body.OtherLanguagePeople + languagesHome;
 	const HomeroomTeacher = req.body.HomeroomTeacher;
+	const SchoolID = req.body.SchoolID;
 
 	mssql.connect(config, function (err) {
 		if (err) {
@@ -92,6 +93,7 @@ app.put("/InsertStudentInformation", function (req, res) {
 		request.input("OtherLanguageHome", mssql.NVarChar, OtherLanguageHome)
 		request.input("OtherLanguagePeople", mssql.NVarChar, OtherLanguagePeople)
 		request.input("HomeroomTeacher", mssql.NVarChar, HomeroomTeacher)
+		request.input("SchoolID", mssql.NVarChar, SchoolID)
         
         request.execute("dbo.InsertStudentInformation", function (err, result) {
 			if (err) {
