@@ -54,6 +54,16 @@ class BreakingWords extends Component {
 			openNotification();
 			return;
 		}
+		//Sometimes the subjects add a ",", "?", "," at the end.  Need to take it out.
+		//console.log("typed answer is (before checks): " + this.state.answerText + "***");
+		this.state.answerText = this.state.answerText.trim();
+		var myLength = this.state.answerText.length;      
+		if ([',', '.', '?'].includes(this.state.answerText.substring(myLength-1))) {
+			this.state.answerText = this.state.answerText.replace(/[.?,]/g, '');      
+		}
+		this.state.answerText = this.state.answerText.trim();
+		this.state.answerText = this.state.answerText.toLowerCase();
+		//console.log("typed answer is (after checks): " + this.state.answerText + "***");
 
 		let catAns = {
 			question: this.state.question,

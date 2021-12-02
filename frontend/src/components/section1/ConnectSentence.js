@@ -72,13 +72,13 @@ class ConnectSentence extends Component {
 
 		let ans;
 		switch (this.state.selectOption) {
-			case 1:
+			case 0:
 				ans = "A";
 				break;
-			case 2:
+			case 1:
 				ans = "B";
 				break;
-			case 3:
+			case 2:
 				ans = "C";
 				break;
 			default:
