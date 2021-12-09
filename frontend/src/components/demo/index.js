@@ -136,7 +136,11 @@ const { Title } = Typography;
 				<div className="section"></div>
       <Divider style={{ margin: "10px" }} />
       <Title level={3} align="left">
+<<<<<<< HEAD
         Minimal Sociographic Info
+=======
+        Form A: Minimal Sociographic Info
+>>>>>>> 5cbefb8... New files for form 2A
 			</Title>
       <Divider style={{ margin: "10px" }} />
        <Formik
@@ -222,8 +226,13 @@ const { Title } = Typography;
          })}*/
          onSubmit={(values, { setSubmitting }) => {
            setTimeout(() => {
+<<<<<<< HEAD
              alert(JSON.stringify(values, null, 2));
              //this.SubmitData(values);     /*put data to database; will need to get a unique id for next section */
+=======
+             //alert(JSON.stringify(values, null, 2));
+             this.SubmitData(values);     /*put data to database; will need to get a unique id for next section */
+>>>>>>> 5cbefb8... New files for form 2A
              setSubmitting(false);
            }, 1000);
 
@@ -271,7 +280,11 @@ const { Title } = Typography;
            />
            </div>
            <div>
+<<<<<<< HEAD
            <MySelect label="What grade are you in?" name="Grade">
+=======
+           <MySelect label="What grade are you in?   " name="Grade">
+>>>>>>> 5cbefb8... New files for form 2A
              <option value="">Select a grade level</option>
              <option value="4">4</option>
              <option value="5">5</option>
@@ -290,7 +303,12 @@ const { Title } = Typography;
              placeholder=""
            />
            </div>
+<<<<<<< HEAD
           <div><label htmlFor="Ethnicity">What is your racial/ethnic background (Please check all that apply)?</label>
+=======
+           <p> </p>
+          <div><label htmlFor="Ethnicity">What is your racial/ethnic background? (Please check all that apply.)</label>
+>>>>>>> 5cbefb8... New files for form 2A
            <MyCheckbox 
             multiple={true} 
             value="white" 
@@ -330,7 +348,12 @@ const { Title } = Typography;
              placeholder=""
            />
            </div>
+<<<<<<< HEAD
            <div><label htmlFor="PrimaryLanguage">What language or languages do <strong>you</strong> speak at home (Please check all that apply)? </label>
+=======
+           <p> </p>
+           <div><label htmlFor="PrimaryLanguage">What language or languages do <strong>you</strong> speak at home? (Please check all that apply.) </label>
+>>>>>>> 5cbefb8... New files for form 2A
            <MyCheckbox 
             multiple={true} 
             value="spanish" 
@@ -361,7 +384,12 @@ const { Title } = Typography;
              placeholder=""
            />
            </div>
+<<<<<<< HEAD
            <div><label htmlFor="languagesHome">What language or languages do <strong>people in your home</strong> speak (Please check all that apply)?</label>
+=======
+           <p> </p>
+           <div><label htmlFor="languagesHome">What language or languages do <strong>people in your home</strong> speak? (Please check all that apply.)</label>
+>>>>>>> 5cbefb8... New files for form 2A
            <MyCheckbox 
             multiple={true} 
             value="spanish" 
@@ -392,6 +420,10 @@ const { Title } = Typography;
              placeholder=""
            />
            </div>
+<<<<<<< HEAD
+=======
+           <p> <br></br></p>
+>>>>>>> 5cbefb8... New files for form 2A
            <button type="submit">Submit</button>
          </Form>
        </Formik>

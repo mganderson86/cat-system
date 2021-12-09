@@ -6,8 +6,11 @@ node_modules/
 # production
 build/
 
+<<<<<<< HEAD
 # ignore config.js
 config.js
+=======
+>>>>>>> 5cbefb8... New files for form 2A
 # misc
 .DS_Store
 

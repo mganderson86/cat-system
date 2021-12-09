@@ -10,7 +10,11 @@ async function sumCorrectIncorrect(req, res) {
 	const questionSum = req.body.questionSum;
 	const sectionName = req.body.sectionName;
 	const numQuestions = req.body.numQuestions;
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> 5cbefb8... New files for form 2A
 	try {
 		let pool = await mssql.connect(config);
 		let result1 = await pool
@@ -31,10 +35,19 @@ async function sumCorrectIncorrect(req, res) {
 
 		// console.log(result2.recordset[0].result);
 		let sumRaschVal = result2.recordset[0].result;
+<<<<<<< HEAD
 		if (sumRaschVal > 6.25 || numQuestions >= 4) {
 		 	res.send({ nextQuestion: "" });
 		 	return;
 		}
+=======
+
+      //commented code so it will keep giving the questions regardless of the numQuestions and sumRaschVal values
+		//if (sumRaschVal > 6.25 || numQuestions >= 4) {      
+      // 	res.send({ nextQuestion: "" });
+		// 	return;
+		//}
+>>>>>>> 5cbefb8... New files for form 2A
 
 		let result3 = await pool
 			.request()
@@ -43,7 +56,12 @@ async function sumCorrectIncorrect(req, res) {
 			.input("bValue", mssql.Decimal, ThetaValue)
 			.output("name", mssql.NChar) // output
 			.execute("dbo.SelectNextQuestion");
+<<<<<<< HEAD
 			let nextQuestion = (result3.output.name !== null) ? result3.output.name : ""; //return blank if no more questions; go to next
+=======
+		//let nextQuestion = result3.output.name;  commented the code so that we skip the algorithm that figures out the next question depending on the answer
+      let nextQuestion = (result3.output.name !== null) ? result3.output.name : ""; //return blank if no more questions; go to next
+>>>>>>> 5cbefb8... New files for form 2A
 		console.log(nextQuestion.trim());
 		res.send({ nextQuestion: nextQuestion.trim() });
 	} catch (err) {

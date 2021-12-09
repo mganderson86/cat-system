@@ -32,13 +32,21 @@ class Section3 extends Component {
 						SECTION 3: ORGANIZING TEXT
 					</Title>
 					<Divider />
+<<<<<<< HEAD
 					<div className="green-text">
+=======
+					{/* <div className="green-text">
+>>>>>>> 5cbefb8... New files for form 2A
 						<Paragraph style={{ color: "black" }}>Can you help Jim fix his essays?</Paragraph>
 						<Paragraph style={{ color: "black" }}>
 							Jim needs your help! All the sentences in his essay got out of order. Can you reorder his
 							essays?
 						</Paragraph>
+<<<<<<< HEAD
 					</div>
+=======
+					</div> */}
+>>>>>>> 5cbefb8... New files for form 2A
 
 					<div style={{ marginTop: "40px" }}>
 						<ul>
@@ -62,9 +70,16 @@ class Section3 extends Component {
 					<div style={{ marginBottom: "5px", height: "50px" }}>
 						<img onClick={this.playAudio} src={Pic} height="54px" width="54px" alt="img" />
 						<ReactAudioPlayer
+<<<<<<< HEAD
 							style={{ display: this.state.showElem, verticalAlign: "middle" }}
 							src={audio}
 							controls
+=======
+							style={{ display: this.playAudio, verticalAlign: "middle" }}
+							src={audio}							
+							controls
+							controlsList="nodownload"
+>>>>>>> 5cbefb8... New files for form 2A
 						></ReactAudioPlayer>
 					</div>
 				</div>

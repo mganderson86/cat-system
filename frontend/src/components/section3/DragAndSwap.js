@@ -25,7 +25,12 @@ class DragAndSwap extends Component {
 		super();
 		this.state = {
 			delay: false,
+<<<<<<< HEAD
 			question: "Anagram_recess",
+=======
+			//question: "Anagram_recess",
+         question: "Anagram_lunches", //will always start at this question for form A
+>>>>>>> 5cbefb8... New files for form 2A
 			numOfOptions: 0,
 			textOptions: [],
 			draggedTask: {},
@@ -238,9 +243,16 @@ class DragAndSwap extends Component {
 				<div style={{ height: "50px", position: "absolute", top: "4%" }}>
 					<img onClick={this.playAudio} src={Pic} height="54px" width="54px" alt="img" />
 					<ReactAudioPlayer
+<<<<<<< HEAD
 						style={{ display: this.state.showElem, verticalAlign: "middle" }}
 						src={this.state.audio}
 						controls
+=======
+						style={{ display: this.playAudio, verticalAlign: "middle" }}
+						src={this.state.audio}						
+						controls
+						controlsList="nodownload"
+>>>>>>> 5cbefb8... New files for form 2A
 					></ReactAudioPlayer>
 				</div>
 				<div className="DragAndDropApp">

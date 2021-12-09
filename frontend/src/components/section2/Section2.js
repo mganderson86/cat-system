@@ -69,9 +69,16 @@ class Section2 extends Component {
 					<div style={{ marginBottom: "5px", height: "50px" }}>
 						<img onClick={this.playAudio} src={Pic} height="54px" width="54px" alt="img" />
 						<ReactAudioPlayer
+<<<<<<< HEAD
 							style={{ display: this.state.showElem, verticalAlign: "middle" }}
 							src={audio}
 							controls
+=======
+							style={{ display: this.playAudio, verticalAlign: "middle" }}
+							src={audio}				
+							controls
+							controlsList="nodownload"
+>>>>>>> 5cbefb8... New files for form 2A
 						></ReactAudioPlayer>
 					</div>
 					<div

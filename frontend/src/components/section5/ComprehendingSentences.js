@@ -24,7 +24,12 @@ class ComprehendingSentences extends Component {
 		this.state = {
 			delay: false,
 			selectOption: -1,
+<<<<<<< HEAD
 			question: "Syntax_pic_1",
+=======
+			//question: "Syntax_pic_1",
+         question: "Syntax_pic_5",  //will always start at this question for form A
+>>>>>>> 5cbefb8... New files for form 2A
 			borderStyle: ["none", "none", "none", "none"],
 			showElem: "none",
 		};
@@ -124,10 +129,18 @@ class ComprehendingSentences extends Component {
 					<div>
 						
 						<ReactAudioPlayer
+<<<<<<< HEAD
 							style={{ display: this.state.showElem }}
 							src={audio}
 							
 							autoPlay={true}
+=======
+							style={{ display: this.state.showElem}}
+							src={audio}
+							
+							autoPlay={true}
+
+>>>>>>> 5cbefb8... New files for form 2A
 						></ReactAudioPlayer>
 					</div>
 					<div>

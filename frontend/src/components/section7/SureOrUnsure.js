@@ -21,7 +21,12 @@ class SureOrUnsure extends Component {
 		this.state = {
 			delay: false,
 			selectOption: -1,
+<<<<<<< HEAD
 			question: "epis_impossible",
+=======
+			//question: "epis_impossible",
+         question: "epis_obvious", //will always start at this quesiton for form A
+>>>>>>> 5cbefb8... New files for form 2A
 			showElem: "none",
 		};
 	}
@@ -139,9 +144,16 @@ class SureOrUnsure extends Component {
 						<span style={{ marginBottom: "5px", height: "50px" }}>
 							<img onClick={this.playAudio} src={Pic} height="54px" width="54px" alt="img" />
 							<ReactAudioPlayer
+<<<<<<< HEAD
 								style={{ display: this.state.showElem, verticalAlign: "middle" }}
 								src={audio}
 								controls
+=======
+								style={{ display: this.playAudio, verticalAlign: "middle" }}
+								src={audio}
+								controls
+								controlsList="nodownload"
+>>>>>>> 5cbefb8... New files for form 2A
 							></ReactAudioPlayer>
 						</span>
 						<Row>

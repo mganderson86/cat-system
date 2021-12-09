@@ -31,7 +31,12 @@ class ConnectSentence extends Component {
 			delay: false,
 			blank: "________________",
 			selectOption: -1,
+<<<<<<< HEAD
 			question: "Connect_sent_however",
+=======
+			//question: "Connect_sent_however",
+         question: "Connect_sent_nonetheless_B",  //will always start at this question for form A
+>>>>>>> 5cbefb8... New files for form 2A
 			radioColor: ["black", "black", "black"],
 			showElem: "none",
 		};
@@ -72,6 +77,15 @@ class ConnectSentence extends Component {
 
 		let ans;
 		switch (this.state.selectOption) {
+<<<<<<< HEAD
+			case 1:
+				ans = "A";
+				break;
+			case 2:
+				ans = "B";
+				break;
+			case 3:
+=======
 			case 0:
 				ans = "A";
 				break;
@@ -79,6 +93,7 @@ class ConnectSentence extends Component {
 				ans = "B";
 				break;
 			case 2:
+>>>>>>> 5cbefb8... New files for form 2A
 				ans = "C";
 				break;
 			default:
@@ -106,7 +121,11 @@ class ConnectSentence extends Component {
 		} else {
 			judgeOfAnswer = "w." + this.state.question;
 		}
+<<<<<<< HEAD
 		// console.log("judgeOfAnswer: " + judgeOfAnswer);
+=======
+		// console.log("judgeOfAnswer: =====> " + judgeOfAnswer);
+>>>>>>> 5cbefb8... New files for form 2A
 
 		await this.props.answerQuestionAns(judgeOfAnswer, this.state.question);
 
@@ -156,9 +175,16 @@ class ConnectSentence extends Component {
 						<div style={{ marginBottom: "5px", height: "50px" }}>
 							<img onClick={this.playAudio} src={Pic} height="54px" width="54px" alt="img" />
 							<ReactAudioPlayer
+<<<<<<< HEAD
 								style={{ display: this.state.showElem, verticalAlign: "middle" }}
 								src={audio}
 								controls
+=======
+								style={{ display: this.playAudio, verticalAlign: "middle" }}
+								src={audio}
+								controls
+								controlsList="nodownload"
+>>>>>>> 5cbefb8... New files for form 2A
 							></ReactAudioPlayer>
 						</div>
 					</Row>

@@ -29,7 +29,12 @@ class IdentifyingDefinitions extends Component {
 			optionA: -1,
 			optionB: -1,
 			optionC: -1,
+<<<<<<< HEAD
 			question: "def_aware_umbrella",
+=======
+			//question: "def_aware_umbrella",
+         question: "def_aware_clown",  //will always start at this question for form A
+>>>>>>> 5cbefb8... New files for form 2A
 			borderStyle: ["none", "none", "none", "none"],
 			showElem: "none",
 			radioColor: ["black", "black", "black"],
@@ -147,9 +152,16 @@ class IdentifyingDefinitions extends Component {
 					<div style={{ marginBottom: "5px", height: "50px" }}>
 						<img onClick={this.playAudio} src={Pic} height="54px" width="54px" alt="img" />
 						<ReactAudioPlayer
+<<<<<<< HEAD
 							style={{ display: this.state.showElem, verticalAlign: "middle" }}
 							src={audio}
 							controls
+=======
+							style={{ display: this.playAudio, verticalAlign: "middle" }}
+							src={audio}
+							controls
+							controlsList="nodownload"
+>>>>>>> 5cbefb8... New files for form 2A
 						></ReactAudioPlayer>
 					</div>
 					{/* Row A */}

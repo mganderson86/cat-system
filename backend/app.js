@@ -10,7 +10,12 @@ app.use(
 	cors({
 		credentials: true,
 		// origin: "http://hbs-310s-it-xxx.times.uh.edu", //production
+<<<<<<< HEAD
 		origin: "http://localhost:3000", //development
+=======
+		//origin: "http://localhost:3000", //development
+		origin: "https://cat-dev.times.uh.edu:8443/", //cat-dev
+>>>>>>> 5cbefb8... New files for form 2A
 		exposedHeaders: ["Origin", "X-Requested-With", "Content-Type, Accept"],
 	})
 );
@@ -67,6 +72,10 @@ app.put("/InsertStudentInformation", function (req, res) {
 	const LastName = req.body.LastName;
 	const Gender = req.body.Gender;
 	const School = req.body.School;
+<<<<<<< HEAD
+=======
+   const SchoolID = req.body.SchoolID;
+>>>>>>> 5cbefb8... New files for form 2A
 	const Grade = req.body.Grade;
 	const Ethnicity = req.body.Ethnicity;
 	const EthnicityOther = req.body.EthnicityOther;
@@ -75,7 +84,10 @@ app.put("/InsertStudentInformation", function (req, res) {
 	const languagesHome = req.body.languagesHome;
 	const OtherLanguagePeople = req.body.OtherLanguagePeople + languagesHome;
 	const HomeroomTeacher = req.body.HomeroomTeacher;
+<<<<<<< HEAD
 	const SchoolID = req.body.SchoolID;
+=======
+>>>>>>> 5cbefb8... New files for form 2A
 
 	mssql.connect(config, function (err) {
 		if (err) {
@@ -86,6 +98,10 @@ app.put("/InsertStudentInformation", function (req, res) {
 		request.input("LastName", mssql.NVarChar, LastName)
 		request.input("Gender", mssql.NVarChar, Gender)
 		request.input("School", mssql.NVarChar, School)
+<<<<<<< HEAD
+=======
+		request.input("SchoolID", mssql.NVarChar, SchoolID)      
+>>>>>>> 5cbefb8... New files for form 2A
 		request.input("Grade", mssql.NVarChar, Grade)
 		request.input("Ethnicity", mssql.NVarChar, Ethnicity)
 		request.input("EthnicityOther", mssql.NVarChar, EthnicityOther)
@@ -93,7 +109,10 @@ app.put("/InsertStudentInformation", function (req, res) {
 		request.input("OtherLanguageHome", mssql.NVarChar, OtherLanguageHome)
 		request.input("OtherLanguagePeople", mssql.NVarChar, OtherLanguagePeople)
 		request.input("HomeroomTeacher", mssql.NVarChar, HomeroomTeacher)
+<<<<<<< HEAD
 		request.input("SchoolID", mssql.NVarChar, SchoolID)
+=======
+>>>>>>> 5cbefb8... New files for form 2A
         
         request.execute("dbo.InsertStudentInformation", function (err, result) {
 			if (err) {
@@ -128,7 +147,11 @@ require("./routes/nextQuestion")(app);
 // 	});
 // });
 
+<<<<<<< HEAD
 var server = app.listen(5000, function () {
+=======
+var server = app.listen(5000, function () { 
+>>>>>>> 5cbefb8... New files for form 2A
 	console.log("Server is running..");
 	const addr = server.address();
 	console.log(`Server listening at http://${addr.address}:${addr.port}`);

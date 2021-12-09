@@ -33,10 +33,17 @@ class Section6 extends Component {
 					</Title>
 					<Divider />
 					<div className="green-text">
+<<<<<<< HEAD
 						<Paragraph style={{ color: "black" }}>Maria is writing a dictionary for adults.</Paragraph>
 						<Paragraph style={{ color: "black" }}>
 							She has written many definitions, but she does not know which definition to include in a
 							dictionary for adults. She needs your help!
+=======
+						<Paragraph style={{ color: "black" }}>A group of students is writing a dictionary for adults.</Paragraph>
+						<Paragraph style={{ color: "black" }}>
+							They have written many definitions for each word and now they do not know which definition to choose. 
+							Help them select which definition to choose for a dictionary for adults.
+>>>>>>> 5cbefb8... New files for form 2A
 						</Paragraph>
 					</div>
 
@@ -70,9 +77,16 @@ class Section6 extends Component {
 					<div style={{ marginBottom: "5px", height: "50px" }}>
 						<img onClick={this.playAudio} src={Pic} height="54px" width="54px" alt="img" />
 						<ReactAudioPlayer
+<<<<<<< HEAD
 							style={{ display: this.state.showElem, verticalAlign: "middle" }}
 							src={audio}
 							controls
+=======
+							style={{ display: this.playAudio, verticalAlign: "middle" }}
+							src={audio}
+							controls
+							controlsList="nodownload"
+>>>>>>> 5cbefb8... New files for form 2A
 						></ReactAudioPlayer>
 					</div>
 				</div>

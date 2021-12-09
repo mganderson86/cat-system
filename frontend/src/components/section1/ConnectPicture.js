@@ -30,7 +30,12 @@ class ConnectPicture extends Component {
 			delay: false,
 			blank: "_______",
 			radioColor: ["black", "black", "black", "black"],
+<<<<<<< HEAD
 			question: "Connect_pic_therefore_B",
+=======
+			//question: "Connect_pic_therefore_B",
+         question: "Connect_pic_asaconsequence",  //will always start at this question for form A
+>>>>>>> 5cbefb8... New files for form 2A
 			showElem: "none",
 		};
 	}
@@ -52,6 +57,10 @@ class ConnectPicture extends Component {
 			openNotification();
 			return;
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5cbefb8... New files for form 2A
 		//Turn on loading and then set time to disable loading
 		this.setState({ delay: true });
 		setTimeout(() => {
@@ -85,7 +94,11 @@ class ConnectPicture extends Component {
 		}
 		// console.log("judgeOfAnswer: " + judgeOfAnswer);
 
+<<<<<<< HEAD
 		await this.props.answerQuestionAns(judgeOfAnswer, this.state.question);
+=======
+        await this.props.answerQuestionAns(judgeOfAnswer, this.state.question);
+>>>>>>> 5cbefb8... New files for form 2A
 
 		let data = {
 			questionAns: this.props.curState.questionAns,
@@ -151,9 +164,16 @@ class ConnectPicture extends Component {
 							<div style={{ marginBottom: "5px", height: "50px" }}>
 								<img onClick={this.playAudio} src={Pic} height="54px" width="54px" alt="img" />
 								<ReactAudioPlayer
+<<<<<<< HEAD
 									style={{ display: this.state.showElem, verticalAlign: "middle" }}
 									src={audio}
 									controls
+=======
+									style={{ display: this.playAudio, verticalAlign: "middle" }}
+									src={audio}
+									controls
+									controlsList="nodownload"
+>>>>>>> 5cbefb8... New files for form 2A
 								></ReactAudioPlayer>
 							</div>
 							<Text strong style={{ color: "black" }}>
@@ -212,7 +232,11 @@ class ConnectPicture extends Component {
 				</div>
 
 				<NextQuestionButton getNextQuestion={this.nextQuestionDelay} delay={this.state.delay} />
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 5cbefb8... New files for form 2A
 				<div style={{ position: "absolute", bottom: "0px", width: "100%" }}>
 					<SectionBar numSection={1} />
 				</div>
@@ -221,6 +245,10 @@ class ConnectPicture extends Component {
 	}
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5cbefb8... New files for form 2A
 const mapDispatchToProps = (dispatch, ownProps) => {
 	return {
 		handleClick() {

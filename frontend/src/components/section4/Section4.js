@@ -50,7 +50,11 @@ class Section4 extends Component {
 							</li>
 							<li>
 								<Text style={{ color: "black" }}>
+<<<<<<< HEAD
 									When you are ready, type changed word inside the green box.
+=======
+									When you are ready, type the changed word inside the box.
+>>>>>>> 5cbefb8... New files for form 2A
 								</Text>
 							</li>
 						</ul>
@@ -61,9 +65,16 @@ class Section4 extends Component {
 						<div style={{ marginBottom: "5px", height: "50px" }}>
 							<img onClick={this.playAudio} src={Pic} height="54px" width="54px" alt="img" />
 							<ReactAudioPlayer
+<<<<<<< HEAD
 								style={{ display: this.state.showElem, verticalAlign: "middle" }}
 								src={audio}
 								controls
+=======
+								style={{ display: this.playAudio, verticalAlign: "middle" }}
+								src={audio}
+								controls
+								controlsList="nodownload"
+>>>>>>> 5cbefb8... New files for form 2A
 							></ReactAudioPlayer>
 						</div>
 					</div>

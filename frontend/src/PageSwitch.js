@@ -78,7 +78,11 @@ class PageSwitch extends React.Component {
 				<Route path="/section8" component={Section8}></Route>
 				<Route path="/section8_1" component={UnderstandingResponses}></Route>
 				<Route path="/ending" component={ThankYouPage}></Route>
+<<<<<<< HEAD
 				<Route path='/questionnaire' component={() => { window.location.href = 'https://survey.alchemer.com/s3/5898216/CALS-Form-2-2020-for-EH-v-10-14-2020'; return null; }} />
+=======
+				
+>>>>>>> 5cbefb8... New files for form 2A
 			</Switch>
 		);
 	}

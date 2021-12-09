@@ -21,7 +21,11 @@ class UnderstandingResponses extends Component {
 		this.state = {
 			delay: false,
 			selectOption: -1,
+<<<<<<< HEAD
 			question: "meta_disagreeing",
+=======
+			question: "meta_disagreeing", //will always start at this question for form A
+>>>>>>> 5cbefb8... New files for form 2A
 			showElem: "none",
 		};
 	}
@@ -102,7 +106,12 @@ class UnderstandingResponses extends Component {
 				console.log(res);
 				if (res.nextQuestion === "") {
 					this.props.clearNumQuestions();
+<<<<<<< HEAD
 					this.props.history.push("/questionnaire");
+=======
+					//this.props.history.push("/questionnaire");
+               this.props.history.push("/ending");
+>>>>>>> 5cbefb8... New files for form 2A
 				} else {
 					this.setState({ question: res.nextQuestion });
 				}
@@ -161,9 +170,16 @@ class UnderstandingResponses extends Component {
 					<div style={{ marginBottom: "5px", height: "50px" }}>
 						<img onClick={this.playAudio} src={Pic} height="54px" width="54px" alt="img" />
 						<ReactAudioPlayer
+<<<<<<< HEAD
 							style={{ display: this.state.showElem, verticalAlign: "middle" }}
 							src={audio}
 							controls
+=======
+							style={{ display: this.playAudio, verticalAlign: "middle" }}
+							src={audio}
+							controls
+							controlsList="nodownload"
+>>>>>>> 5cbefb8... New files for form 2A
 						></ReactAudioPlayer>
 					</div>
 					<Row>

@@ -27,7 +27,12 @@ class TrackingTheme extends Component {
 			delay: false,
 			value: -1,
 			radioColor: ["black", "black", "black"],
+<<<<<<< HEAD
 			question: "Anaphora_material",
+=======
+			//question: "Anaphora_material",
+         question: "Anaphora_olympicgames",  //will always start at this question for form A
+>>>>>>> 5cbefb8... New files for form 2A
 			showElem: "none",
 		};
 	}
@@ -139,9 +144,16 @@ class TrackingTheme extends Component {
 					<div style={{ marginBottom: "5px", height: "50px" }}>
 						<img onClick={this.playAudio} src={Pic} height="54px" width="54px" alt="img" />
 						<ReactAudioPlayer
+<<<<<<< HEAD
 							style={{ display: this.state.showElem, verticalAlign: "middle" }}
 							src={audio}
 							controls
+=======
+							style={{ display: this.playAudio, verticalAlign: "middle" }}
+							src={audio}
+							controls
+							controlsList="nodownload"
+>>>>>>> 5cbefb8... New files for form 2A
 						></ReactAudioPlayer>
 					</div>
 					<div

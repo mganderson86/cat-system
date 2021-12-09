@@ -26,7 +26,12 @@ class BreakingWords extends Component {
 		this.state = {
 			delay: false,
 			answerText: "",
+<<<<<<< HEAD
 			question: "Morpho_activity",
+=======
+			//question: "Morpho_activity",
+         question: "Morpho_complexity", //will always start at this question for form A
+>>>>>>> 5cbefb8... New files for form 2A
 			showElem: "none",
 		};
 	}
@@ -54,21 +59,29 @@ class BreakingWords extends Component {
 			openNotification();
 			return;
 		}
-		//Sometimes the subjects add a ",", "?", "," at the end.  Need to take it out.
-		//console.log("typed answer is (before checks): " + this.state.answerText + "***");
-		this.state.answerText = this.state.answerText.trim();
-		var myLength = this.state.answerText.length;      
-		if ([',', '.', '?'].includes(this.state.answerText.substring(myLength-1))) {
-			this.state.answerText = this.state.answerText.replace(/[.?,]/g, '');      
-		}
-		this.state.answerText = this.state.answerText.trim();
-		this.state.answerText = this.state.answerText.toLowerCase();
-		//console.log("typed answer is (after checks): " + this.state.answerText + "***");
 
+<<<<<<< HEAD
+=======
+      //Sometimes the subjects add a ",", "?", "," at the end.  Need to take it out.
+      //console.log("typed answer is (before checks): " + this.state.answerText + "***");
+      this.state.answerText = this.state.answerText.trim();
+      var myLength = this.state.answerText.length;      
+      if ([',', '.', '?'].includes(this.state.answerText.substring(myLength-1))) {
+         this.state.answerText = this.state.answerText.replace(/[.?,]/g, '');      
+      }
+      this.state.answerText = this.state.answerText.trim();
+      this.state.answerText = this.state.answerText.toLowerCase();
+      //console.log("typed answer is (after checks): " + this.state.answerText + "***");
+      
+>>>>>>> 5cbefb8... New files for form 2A
 		let catAns = {
 			question: this.state.question,
 			answer: this.state.answerText,
 		};
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5cbefb8... New files for form 2A
 		
 		let id = sessionStorage.getItem("ID");
 		
@@ -80,7 +93,13 @@ class BreakingWords extends Component {
 		}
 
 		let judgeOfAnswer;
+<<<<<<< HEAD
 		const correctAns = this.props.curState[this.state.question].answer;
+=======
+		const correctAns = this.props.curState[this.state.question].answer;      
+      //console.log("reducer answer is: " + correctAns);
+      //console.log("typed answer is: " + this.state.answerText);
+>>>>>>> 5cbefb8... New files for form 2A
 
 		if (correctAns.includes(this.state.answerText)) {
 			judgeOfAnswer = "r." + this.state.question;
@@ -135,9 +154,16 @@ class BreakingWords extends Component {
 					<div style={{ marginBottom: "5px", height: "50px" }}>
 						<img onClick={this.playAudio} src={Pic} height="54px" width="54px" alt="img" />
 						<ReactAudioPlayer
+<<<<<<< HEAD
 							style={{ display: this.state.showElem, verticalAlign: "middle" }}
 							src={audio}
 							controls
+=======
+							style={{ display: this.playAudio, verticalAlign: "middle" }}
+							src={audio}
+							controls
+							controlsList="nodownload"
+>>>>>>> 5cbefb8... New files for form 2A
 						></ReactAudioPlayer>
 					</div>
 					<Row>
